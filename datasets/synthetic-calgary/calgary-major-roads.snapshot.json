@@ -1,0 +1,1526 @@
+{
+  "datasetId": "tqjs-vnhy",
+  "retrievedAt": "2026-08-30T08:23:20.979Z",
+  "rows": [
+    {
+      "full_name": "100 AV NE",
+      "segments": "24"
+    },
+    {
+      "full_name": "104 AV NE",
+      "segments": "8"
+    },
+    {
+      "full_name": "106 AV SE",
+      "segments": "51"
+    },
+    {
+      "full_name": "109 ST SW",
+      "segments": "8"
+    },
+    {
+      "full_name": "10 ST NW",
+      "segments": "49"
+    },
+    {
+      "full_name": "10 ST SW",
+      "segments": "7"
+    },
+    {
+      "full_name": "112 AV NW",
+      "segments": "52"
+    },
+    {
+      "full_name": "114 AV SE",
+      "segments": "203"
+    },
+    {
+      "full_name": "11 AV SE",
+      "segments": "6"
+    },
+    {
+      "full_name": "11 AV SW",
+      "segments": "18"
+    },
+    {
+      "full_name": "11 ST NE",
+      "segments": "89"
+    },
+    {
+      "full_name": "11 ST SE",
+      "segments": "81"
+    },
+    {
+      "full_name": "11 ST SW",
+      "segments": "2"
+    },
+    {
+      "full_name": "120 AV NE",
+      "segments": "14"
+    },
+    {
+      "full_name": "126 AV SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "127 AV SW",
+      "segments": "4"
+    },
+    {
+      "full_name": "128 AV NE",
+      "segments": "128"
+    },
+    {
+      "full_name": "12 AV SE",
+      "segments": "2"
+    },
+    {
+      "full_name": "12 AV SW",
+      "segments": "25"
+    },
+    {
+      "full_name": "12 ST NE",
+      "segments": "44"
+    },
+    {
+      "full_name": "130 AV SE",
+      "segments": "138"
+    },
+    {
+      "full_name": "130 AV SW",
+      "segments": "24"
+    },
+    {
+      "full_name": "133 ST NW",
+      "segments": "5"
+    },
+    {
+      "full_name": "138 AV SE",
+      "segments": "3"
+    },
+    {
+      "full_name": "140 AV NE",
+      "segments": "11"
+    },
+    {
+      "full_name": "144 AV NE",
+      "segments": "33"
+    },
+    {
+      "full_name": "144 AV NW",
+      "segments": "140"
+    },
+    {
+      "full_name": "146 AV SE",
+      "segments": "21"
+    },
+    {
+      "full_name": "14 ST NE",
+      "segments": "36"
+    },
+    {
+      "full_name": "14 ST NW",
+      "segments": "282"
+    },
+    {
+      "full_name": "14 ST SW",
+      "segments": "177"
+    },
+    {
+      "full_name": "154 AV SW",
+      "segments": "26"
+    },
+    {
+      "full_name": "155 AV SW",
+      "segments": "5"
+    },
+    {
+      "full_name": "15 ST NE",
+      "segments": "18"
+    },
+    {
+      "full_name": "15 ST SE",
+      "segments": "12"
+    },
+    {
+      "full_name": "162 AV SE",
+      "segments": "56"
+    },
+    {
+      "full_name": "162 AV SW",
+      "segments": "116"
+    },
+    {
+      "full_name": "16 AV NE",
+      "segments": "192"
+    },
+    {
+      "full_name": "16 AV NW",
+      "segments": "223"
+    },
+    {
+      "full_name": "17 AV SE",
+      "segments": "218"
+    },
+    {
+      "full_name": "17 AV SW",
+      "segments": "292"
+    },
+    {
+      "full_name": "18 ST SE",
+      "segments": "112"
+    },
+    {
+      "full_name": "194 AV SE",
+      "segments": "60"
+    },
+    {
+      "full_name": "194 AV SW",
+      "segments": "59"
+    },
+    {
+      "full_name": "19 ST NE",
+      "segments": "71"
+    },
+    {
+      "full_name": "19 ST SE",
+      "segments": "11"
+    },
+    {
+      "full_name": "19 ST SW",
+      "segments": "5"
+    },
+    {
+      "full_name": "1 ST NE",
+      "segments": "7"
+    },
+    {
+      "full_name": "1 ST SE",
+      "segments": "32"
+    },
+    {
+      "full_name": "202 AV SE",
+      "segments": "7"
+    },
+    {
+      "full_name": "20 AV NE",
+      "segments": "18"
+    },
+    {
+      "full_name": "210 AV SE",
+      "segments": "67"
+    },
+    {
+      "full_name": "210 AV SW",
+      "segments": "52"
+    },
+    {
+      "full_name": "212 AV SE",
+      "segments": "17"
+    },
+    {
+      "full_name": "226 AV SW",
+      "segments": "1"
+    },
+    {
+      "full_name": "24 AV NW",
+      "segments": "52"
+    },
+    {
+      "full_name": "24 ST NW",
+      "segments": "11"
+    },
+    {
+      "full_name": "24 ST SE",
+      "segments": "102"
+    },
+    {
+      "full_name": "24 ST SW",
+      "segments": "118"
+    },
+    {
+      "full_name": "25 AV SE",
+      "segments": "35"
+    },
+    {
+      "full_name": "25 AV SW",
+      "segments": "1"
+    },
+    {
+      "full_name": "25 ST NE",
+      "segments": "5"
+    },
+    {
+      "full_name": "25 ST SE",
+      "segments": "25"
+    },
+    {
+      "full_name": "26 AV SE",
+      "segments": "16"
+    },
+    {
+      "full_name": "26 AV SW",
+      "segments": "2"
+    },
+    {
+      "full_name": "26 ST SE",
+      "segments": "38"
+    },
+    {
+      "full_name": "27 AV NE",
+      "segments": "22"
+    },
+    {
+      "full_name": "28 ST SE",
+      "segments": "18"
+    },
+    {
+      "full_name": "32 AV NE",
+      "segments": "237"
+    },
+    {
+      "full_name": "32 AV NW",
+      "segments": "68"
+    },
+    {
+      "full_name": "32 AV SW",
+      "segments": "2"
+    },
+    {
+      "full_name": "33 AV SW",
+      "segments": "22"
+    },
+    {
+      "full_name": "34 AV NW",
+      "segments": "9"
+    },
+    {
+      "full_name": "34 AV SE",
+      "segments": "11"
+    },
+    {
+      "full_name": "34 AV SW",
+      "segments": "11"
+    },
+    {
+      "full_name": "36 ST NE",
+      "segments": "248"
+    },
+    {
+      "full_name": "36 ST SE",
+      "segments": "99"
+    },
+    {
+      "full_name": "37 ST NW",
+      "segments": "23"
+    },
+    {
+      "full_name": "37 ST SW",
+      "segments": "80"
+    },
+    {
+      "full_name": "39 AV NE",
+      "segments": "28"
+    },
+    {
+      "full_name": "3 AV NW",
+      "segments": "16"
+    },
+    {
+      "full_name": "40 AV NW",
+      "segments": "14"
+    },
+    {
+      "full_name": "40 ST SE",
+      "segments": "20"
+    },
+    {
+      "full_name": "41 AV NE",
+      "segments": "1"
+    },
+    {
+      "full_name": "42 AV SE",
+      "segments": "42"
+    },
+    {
+      "full_name": "42 AV SW",
+      "segments": "3"
+    },
+    {
+      "full_name": "42 ST SE",
+      "segments": "27"
+    },
+    {
+      "full_name": "45 ST SE",
+      "segments": "17"
+    },
+    {
+      "full_name": "46 AV SE",
+      "segments": "14"
+    },
+    {
+      "full_name": "46 ST SE",
+      "segments": "11"
+    },
+    {
+      "full_name": "47 ST NE",
+      "segments": "18"
+    },
+    {
+      "full_name": "48 AV NE",
+      "segments": "26"
+    },
+    {
+      "full_name": "48 ST SE",
+      "segments": "24"
+    },
+    {
+      "full_name": "49 AV NE",
+      "segments": "7"
+    },
+    {
+      "full_name": "49 ST NW",
+      "segments": "12"
+    },
+    {
+      "full_name": "4 AV SE",
+      "segments": "10"
+    },
+    {
+      "full_name": "4 AV SW",
+      "segments": "16"
+    },
+    {
+      "full_name": "4 ST NE",
+      "segments": "58"
+    },
+    {
+      "full_name": "4 ST SW",
+      "segments": "56"
+    },
+    {
+      "full_name": "50 AV SE",
+      "segments": "83"
+    },
+    {
+      "full_name": "50 AV SW",
+      "segments": "18"
+    },
+    {
+      "full_name": "52 ST NE",
+      "segments": "124"
+    },
+    {
+      "full_name": "52 ST SE",
+      "segments": "448"
+    },
+    {
+      "full_name": "53 ST NW",
+      "segments": "40"
+    },
+    {
+      "full_name": "57 AV NE",
+      "segments": "6"
+    },
+    {
+      "full_name": "58 AV SE",
+      "segments": "45"
+    },
+    {
+      "full_name": "58 AV SW",
+      "segments": "33"
+    },
+    {
+      "full_name": "5 AV SE",
+      "segments": "11"
+    },
+    {
+      "full_name": "5 AV SW",
+      "segments": "20"
+    },
+    {
+      "full_name": "5 ST SW",
+      "segments": "56"
+    },
+    {
+      "full_name": "60 ST NE",
+      "segments": "88"
+    },
+    {
+      "full_name": "61 AV SE",
+      "segments": "58"
+    },
+    {
+      "full_name": "61 AV SW",
+      "segments": "13"
+    },
+    {
+      "full_name": "64 AV NE",
+      "segments": "149"
+    },
+    {
+      "full_name": "64 AV NW",
+      "segments": "31"
+    },
+    {
+      "full_name": "68 ST NE",
+      "segments": "137"
+    },
+    {
+      "full_name": "68 ST SE",
+      "segments": "121"
+    },
+    {
+      "full_name": "69 ST SW",
+      "segments": "102"
+    },
+    {
+      "full_name": "6 AV SE",
+      "segments": "3"
+    },
+    {
+      "full_name": "6 AV SW",
+      "segments": "36"
+    },
+    {
+      "full_name": "6 ST NE",
+      "segments": "9"
+    },
+    {
+      "full_name": "6 ST SW",
+      "segments": "38"
+    },
+    {
+      "full_name": "72 AV SE",
+      "segments": "51"
+    },
+    {
+      "full_name": "77 ST NW",
+      "segments": "13"
+    },
+    {
+      "full_name": "80 AV NE",
+      "segments": "75"
+    },
+    {
+      "full_name": "83 ST NW",
+      "segments": "8"
+    },
+    {
+      "full_name": "84 ST SE",
+      "segments": "57"
+    },
+    {
+      "full_name": "85 ST NW",
+      "segments": "41"
+    },
+    {
+      "full_name": "85 ST SW",
+      "segments": "114"
+    },
+    {
+      "full_name": "86 AV SE",
+      "segments": "14"
+    },
+    {
+      "full_name": "87 ST NW",
+      "segments": "6"
+    },
+    {
+      "full_name": "88 AV NE",
+      "segments": "54"
+    },
+    {
+      "full_name": "88 ST SE",
+      "segments": "19"
+    },
+    {
+      "full_name": "8 ST SW",
+      "segments": "34"
+    },
+    {
+      "full_name": "90 AV SE",
+      "segments": "42"
+    },
+    {
+      "full_name": "90 AV SW",
+      "segments": "94"
+    },
+    {
+      "full_name": "93 AV NE",
+      "segments": "3"
+    },
+    {
+      "full_name": "94 AV SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "96 AV NE",
+      "segments": "62"
+    },
+    {
+      "full_name": "9 AV SE",
+      "segments": "32"
+    },
+    {
+      "full_name": "9 AV SW",
+      "segments": "54"
+    },
+    {
+      "full_name": "9 ST NE",
+      "segments": "1"
+    },
+    {
+      "full_name": "9 ST SW",
+      "segments": "10"
+    },
+    {
+      "full_name": "ACADIA DR SE",
+      "segments": "16"
+    },
+    {
+      "full_name": "AIRPORT TR NE",
+      "segments": "86"
+    },
+    {
+      "full_name": "ALDERSYDE GA SE",
+      "segments": "12"
+    },
+    {
+      "full_name": "ALQUILA DR NW",
+      "segments": "1"
+    },
+    {
+      "full_name": "ANDERSON RD SE",
+      "segments": "64"
+    },
+    {
+      "full_name": "ANDERSON RD SW",
+      "segments": "120"
+    },
+    {
+      "full_name": "AUBURN BAY BV SE",
+      "segments": "12"
+    },
+    {
+      "full_name": "AUBURN BAY GA SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "AURORA PARK DR NE",
+      "segments": "9"
+    },
+    {
+      "full_name": "AURORA PARK LI NE",
+      "segments": "10"
+    },
+    {
+      "full_name": "AVIATION BV NE",
+      "segments": "8"
+    },
+    {
+      "full_name": "BARLOW CR NE",
+      "segments": "13"
+    },
+    {
+      "full_name": "BARLOW TR NE",
+      "segments": "234"
+    },
+    {
+      "full_name": "BARLOW TR SE",
+      "segments": "198"
+    },
+    {
+      "full_name": "BARRACKS ST SW",
+      "segments": "3"
+    },
+    {
+      "full_name": "BEARSPAW DAM RD NW",
+      "segments": "2"
+    },
+    {
+      "full_name": "BEDDINGTON BV NE",
+      "segments": "35"
+    },
+    {
+      "full_name": "BEDDINGTON BV NW",
+      "segments": "44"
+    },
+    {
+      "full_name": "BEDDINGTON TR NE",
+      "segments": "27"
+    },
+    {
+      "full_name": "BEDDINGTON TR NW",
+      "segments": "77"
+    },
+    {
+      "full_name": "BELMONT BV SW",
+      "segments": "4"
+    },
+    {
+      "full_name": "BERKSHIRE BV NW",
+      "segments": "51"
+    },
+    {
+      "full_name": "BLACKFOOT TR SE",
+      "segments": "178"
+    },
+    {
+      "full_name": "BONAVENTURE DR SE",
+      "segments": "38"
+    },
+    {
+      "full_name": "BOW BOTTOM TR SE",
+      "segments": "52"
+    },
+    {
+      "full_name": "BOWFORT RD NW",
+      "segments": "22"
+    },
+    {
+      "full_name": "BOWNESS RD NW",
+      "segments": "96"
+    },
+    {
+      "full_name": "BOW TR SW",
+      "segments": "181"
+    },
+    {
+      "full_name": "BUFFALO RUN BV SW",
+      "segments": "1"
+    },
+    {
+      "full_name": "CAMBRIAN DR NW",
+      "segments": "10"
+    },
+    {
+      "full_name": "CANADA OLYMPIC DR SW",
+      "segments": "10"
+    },
+    {
+      "full_name": "CANYON MEADOWS DR SE",
+      "segments": "93"
+    },
+    {
+      "full_name": "CANYON MEADOWS DR SW",
+      "segments": "37"
+    },
+    {
+      "full_name": "CASTLERIDGE BV NE",
+      "segments": "34"
+    },
+    {
+      "full_name": "CENTRE ST N",
+      "segments": "155"
+    },
+    {
+      "full_name": "CENTRE ST S",
+      "segments": "19"
+    },
+    {
+      "full_name": "CHAPARRAL BV SE",
+      "segments": "35"
+    },
+    {
+      "full_name": "CHAPARRAL DR SE",
+      "segments": "11"
+    },
+    {
+      "full_name": "CHARLESWOOD DR NW",
+      "segments": "57"
+    },
+    {
+      "full_name": "CHRISTIE PARK GA SW",
+      "segments": "2"
+    },
+    {
+      "full_name": "CITADEL GA NW",
+      "segments": "8"
+    },
+    {
+      "full_name": "CITYLINE GA NE",
+      "segments": "2"
+    },
+    {
+      "full_name": "CITYSCAPE BV NE",
+      "segments": "12"
+    },
+    {
+      "full_name": "CITYSCAPE DR NE",
+      "segments": "1"
+    },
+    {
+      "full_name": "CORNERSTONE BV NE",
+      "segments": "38"
+    },
+    {
+      "full_name": "COSTELLO BV SW",
+      "segments": "7"
+    },
+    {
+      "full_name": "COUNTRY HILL BV NE",
+      "segments": "1"
+    },
+    {
+      "full_name": "COUNTRY HILLS BV NE",
+      "segments": "307"
+    },
+    {
+      "full_name": "COUNTRY HILLS BV NW",
+      "segments": "288"
+    },
+    {
+      "full_name": "COUNTRY HILLS LD NW",
+      "segments": "2"
+    },
+    {
+      "full_name": "COUNTRY HILLS RD NW",
+      "segments": "16"
+    },
+    {
+      "full_name": "COUNTRY VILLAGE RD NE",
+      "segments": "35"
+    },
+    {
+      "full_name": "COVENTRY HILLS BV NE",
+      "segments": "30"
+    },
+    {
+      "full_name": "COVENTRY HILLS WY NE",
+      "segments": "8"
+    },
+    {
+      "full_name": "CRANARCH RD SE",
+      "segments": "16"
+    },
+    {
+      "full_name": "CRANBERRY RD SE",
+      "segments": "13"
+    },
+    {
+      "full_name": "CRANFORD WY SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "CRANSTON AV SE",
+      "segments": "41"
+    },
+    {
+      "full_name": "CRANSTON BV SE",
+      "segments": "20"
+    },
+    {
+      "full_name": "CRANSTON GA SE",
+      "segments": "19"
+    },
+    {
+      "full_name": "CRANSTON RD SE",
+      "segments": "10"
+    },
+    {
+      "full_name": "CRESTMONT BV SW",
+      "segments": "6"
+    },
+    {
+      "full_name": "CROWCHILD TR NW",
+      "segments": "355"
+    },
+    {
+      "full_name": "CROWCHILD TR SW",
+      "segments": "175"
+    },
+    {
+      "full_name": "CROWFOOT WY NW",
+      "segments": "9"
+    },
+    {
+      "full_name": "DALHOUSIE DR NW",
+      "segments": "44"
+    },
+    {
+      "full_name": "DARTMOUTH RD SE",
+      "segments": "7"
+    },
+    {
+      "full_name": "DEERFOOT TR NE",
+      "segments": "189"
+    },
+    {
+      "full_name": "DEERFOOT TR SE",
+      "segments": "351"
+    },
+    {
+      "full_name": "DISCOVERY RIDGE BV SW",
+      "segments": "9"
+    },
+    {
+      "full_name": "DOUGLASDALE BV SE",
+      "segments": "16"
+    },
+    {
+      "full_name": "DOUGLAS GLEN GA SE",
+      "segments": "8"
+    },
+    {
+      "full_name": "DUFFERIN BV SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "EDGEMONT BV NW",
+      "segments": "62"
+    },
+    {
+      "full_name": "EDMONTON TR NE",
+      "segments": "99"
+    },
+    {
+      "full_name": "ELBOW DR SW",
+      "segments": "18"
+    },
+    {
+      "full_name": "EVANSPARK BV NW",
+      "segments": "12"
+    },
+    {
+      "full_name": "FALCONRIDGE BV NE",
+      "segments": "88"
+    },
+    {
+      "full_name": "FALCONRIDGE DR NE",
+      "segments": "3"
+    },
+    {
+      "full_name": "FISH CREEK BV SW",
+      "segments": "59"
+    },
+    {
+      "full_name": "FLANDERS AV SW",
+      "segments": "10"
+    },
+    {
+      "full_name": "FREEPORT BV NE",
+      "segments": "44"
+    },
+    {
+      "full_name": "FREEPORT DR NE",
+      "segments": "20"
+    },
+    {
+      "full_name": "GLENMORE TR SE",
+      "segments": "191"
+    },
+    {
+      "full_name": "GLENMORE TR SW",
+      "segments": "171"
+    },
+    {
+      "full_name": "GREY EAGLE BV SW",
+      "segments": "4"
+    },
+    {
+      "full_name": "GREY EAGLE DR SW",
+      "segments": "16"
+    },
+    {
+      "full_name": "HARVEST HILLS BV N",
+      "segments": "149"
+    },
+    {
+      "full_name": "HERITAGE DR SE",
+      "segments": "89"
+    },
+    {
+      "full_name": "HERITAGE DR SW",
+      "segments": "53"
+    },
+    {
+      "full_name": "HERITAGE MEADOWS WY SE",
+      "segments": "26"
+    },
+    {
+      "full_name": "HIDDEN VALLEY DR NW",
+      "segments": "8"
+    },
+    {
+      "full_name": "HIGHFIELD BV SE",
+      "segments": "8"
+    },
+    {
+      "full_name": "HIGHFIELD RD SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "HWY 22X",
+      "segments": "4"
+    },
+    {
+      "full_name": "JAMES MCKEVITT RD SW",
+      "segments": "123"
+    },
+    {
+      "full_name": "JOHN LAURIE BV NW",
+      "segments": "160"
+    },
+    {
+      "full_name": "LAKE FRASER DR SE",
+      "segments": "21"
+    },
+    {
+      "full_name": "LEGACY GA SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "LEGACY VILLAGE LI SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "MACLEOD TR S",
+      "segments": "264"
+    },
+    {
+      "full_name": "MACLEOD TR SE",
+      "segments": "147"
+    },
+    {
+      "full_name": "MACLEOD TR SW",
+      "segments": "83"
+    },
+    {
+      "full_name": "MAGNOLIA ST SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "MAHOGANY BV SE",
+      "segments": "39"
+    },
+    {
+      "full_name": "MAHOGANY GA SE",
+      "segments": "21"
+    },
+    {
+      "full_name": "MAHOGANY HT SE",
+      "segments": "2"
+    },
+    {
+      "full_name": "MAHOGANY MR SE",
+      "segments": "2"
+    },
+    {
+      "full_name": "MAHOGANY RD SE",
+      "segments": "6"
+    },
+    {
+      "full_name": "MAHOGANY TC SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "MAHOGANY VW SE",
+      "segments": "2"
+    },
+    {
+      "full_name": "MANHATTAN RD SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "MARTINDALE GA NE",
+      "segments": "12"
+    },
+    {
+      "full_name": "MCCALL WY NE",
+      "segments": "23"
+    },
+    {
+      "full_name": "MCIVOR BV SE",
+      "segments": "64"
+    },
+    {
+      "full_name": "MCKENZIE LAKE BV SE",
+      "segments": "86"
+    },
+    {
+      "full_name": "MCKENZIE TOWNE BV SE",
+      "segments": "28"
+    },
+    {
+      "full_name": "MCKNIGHT BV NE",
+      "segments": "200"
+    },
+    {
+      "full_name": "MCKNIGHT BV NW",
+      "segments": "33"
+    },
+    {
+      "full_name": "MEMORIAL DR E",
+      "segments": "89"
+    },
+    {
+      "full_name": "MEMORIAL DR NE",
+      "segments": "60"
+    },
+    {
+      "full_name": "MEMORIAL DR NW",
+      "segments": "79"
+    },
+    {
+      "full_name": "MEMORIAL DR SE",
+      "segments": "71"
+    },
+    {
+      "full_name": "METIS TR NE",
+      "segments": "143"
+    },
+    {
+      "full_name": "MIDLAKE BV SE",
+      "segments": "24"
+    },
+    {
+      "full_name": "MIDPARK BV SE",
+      "segments": "23"
+    },
+    {
+      "full_name": "MILLRISE BV SW",
+      "segments": "32"
+    },
+    {
+      "full_name": "MOUNT ROYAL GA SW",
+      "segments": "23"
+    },
+    {
+      "full_name": "NEW BRIGHTON AV SE",
+      "segments": "10"
+    },
+    {
+      "full_name": "NEW BRIGHTON DR SE",
+      "segments": "10"
+    },
+    {
+      "full_name": "NEW BRIGHTON GA SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "NEW BRIGHTON WY SE",
+      "segments": "9"
+    },
+    {
+      "full_name": "NOLAN HILL AV NW",
+      "segments": "2"
+    },
+    {
+      "full_name": "NOLAN HILL DR NW",
+      "segments": "9"
+    },
+    {
+      "full_name": "NORTHLAND DR NW",
+      "segments": "29"
+    },
+    {
+      "full_name": "NORTHMOUNT DR NW",
+      "segments": "7"
+    },
+    {
+      "full_name": "NOSE HILL DR NW",
+      "segments": "174"
+    },
+    {
+      "full_name": "OGDEN RD SE",
+      "segments": "89"
+    },
+    {
+      "full_name": "OLD BANFF COACH RD SW",
+      "segments": "111"
+    },
+    {
+      "full_name": "PANAMOUNT BV NW",
+      "segments": "15"
+    },
+    {
+      "full_name": "PANATELLA BV NW",
+      "segments": "10"
+    },
+    {
+      "full_name": "PANORAMA HILLS BV NW",
+      "segments": "35"
+    },
+    {
+      "full_name": "PARKDALE BV NW",
+      "segments": "15"
+    },
+    {
+      "full_name": "PEIGAN TR SE",
+      "segments": "87"
+    },
+    {
+      "full_name": "PRESTWICK GA SE",
+      "segments": "7"
+    },
+    {
+      "full_name": "QUARRY PARK BV SE",
+      "segments": "19"
+    },
+    {
+      "full_name": "RANCHLANDS BV NW",
+      "segments": "30"
+    },
+    {
+      "full_name": "RANGEVIEW AV SE",
+      "segments": "15"
+    },
+    {
+      "full_name": "RANGEVIEW BV SE",
+      "segments": "29"
+    },
+    {
+      "full_name": "REDSTONE BV NE",
+      "segments": "9"
+    },
+    {
+      "full_name": "REDSTONE DR NE",
+      "segments": "1"
+    },
+    {
+      "full_name": "RICARDO RANCH BV SE",
+      "segments": "8"
+    },
+    {
+      "full_name": "RICHARD RD SW",
+      "segments": "44"
+    },
+    {
+      "full_name": "RICHARDSON WY SW",
+      "segments": "37"
+    },
+    {
+      "full_name": "RICHMOND RD SW",
+      "segments": "109"
+    },
+    {
+      "full_name": "ROCKY RIDGE RD NW",
+      "segments": "88"
+    },
+    {
+      "full_name": "ROYAL BIRCH BV NW",
+      "segments": "13"
+    },
+    {
+      "full_name": "ROYAL VISTA DR NW",
+      "segments": "8"
+    },
+    {
+      "full_name": "RUNDLEHORN DR NE",
+      "segments": "6"
+    },
+    {
+      "full_name": "SADDLEBROOK DR NE",
+      "segments": "1"
+    },
+    {
+      "full_name": "SADDLETOWNE CI NE",
+      "segments": "40"
+    },
+    {
+      "full_name": "SAGE HILL BV NW",
+      "segments": "1"
+    },
+    {
+      "full_name": "SAGE HILL DR NW",
+      "segments": "36"
+    },
+    {
+      "full_name": "SAGE HILL GA NW",
+      "segments": "12"
+    },
+    {
+      "full_name": "SAGE VALLEY BV NW",
+      "segments": "13"
+    },
+    {
+      "full_name": "SARCEE TR NW",
+      "segments": "192"
+    },
+    {
+      "full_name": "SARCEE TR SW",
+      "segments": "79"
+    },
+    {
+      "full_name": "SARCEE TR W",
+      "segments": "45"
+    },
+    {
+      "full_name": "SAVANNA CR NE",
+      "segments": "1"
+    },
+    {
+      "full_name": "SCENIC ACRES BV NW",
+      "segments": "35"
+    },
+    {
+      "full_name": "SCENIC ACRES LI NW",
+      "segments": "32"
+    },
+    {
+      "full_name": "SCENIC BOW RD NW",
+      "segments": "7"
+    },
+    {
+      "full_name": "SETON BV SE",
+      "segments": "76"
+    },
+    {
+      "full_name": "SETON DR SE",
+      "segments": "35"
+    },
+    {
+      "full_name": "SETON WY SE",
+      "segments": "76"
+    },
+    {
+      "full_name": "SHAGANAPPI TR NW",
+      "segments": "284"
+    },
+    {
+      "full_name": "SHAWNESSY BV SE",
+      "segments": "15"
+    },
+    {
+      "full_name": "SHAWNESSY BV SW",
+      "segments": "50"
+    },
+    {
+      "full_name": "SHAWNESSY DR SW",
+      "segments": "7"
+    },
+    {
+      "full_name": "SHAWVILLE BV SE",
+      "segments": "52"
+    },
+    {
+      "full_name": "SHAWVILLE GA SE",
+      "segments": "8"
+    },
+    {
+      "full_name": "SHAWVILLE GA SW",
+      "segments": "12"
+    },
+    {
+      "full_name": "SHERIFF KING ST SW",
+      "segments": "74"
+    },
+    {
+      "full_name": "SHERVIEW DR NW",
+      "segments": "22"
+    },
+    {
+      "full_name": "SHERWOOD BV NW",
+      "segments": "24"
+    },
+    {
+      "full_name": "SHERWOOD DR NW",
+      "segments": "1"
+    },
+    {
+      "full_name": "SIERRA MORENA BV SW",
+      "segments": "5"
+    },
+    {
+      "full_name": "SILVER SPRINGS BV NW",
+      "segments": "39"
+    },
+    {
+      "full_name": "SILVER SPRINGS GA NW",
+      "segments": "22"
+    },
+    {
+      "full_name": "SILVERTON BV SW",
+      "segments": "2"
+    },
+    {
+      "full_name": "SIMCOE BV SW",
+      "segments": "10"
+    },
+    {
+      "full_name": "SIROCCO DR SW",
+      "segments": "26"
+    },
+    {
+      "full_name": "SKYVIEW CI NE",
+      "segments": "8"
+    },
+    {
+      "full_name": "SKYVIEW RANCH BV NE",
+      "segments": "25"
+    },
+    {
+      "full_name": "SOUTHLAND DR SE",
+      "segments": "53"
+    },
+    {
+      "full_name": "SOUTHLAND DR SW",
+      "segments": "114"
+    },
+    {
+      "full_name": "SPRUCE MEADOWS GR SW",
+      "segments": "17"
+    },
+    {
+      "full_name": "SPRUCE MEADOWS TR S",
+      "segments": "1"
+    },
+    {
+      "full_name": "SPRUCE MEADOWS TR SW",
+      "segments": "8"
+    },
+    {
+      "full_name": "SPRUCE MEADOWS WY SW",
+      "segments": "25"
+    },
+    {
+      "full_name": "STONEHILL DR NE",
+      "segments": "17"
+    },
+    {
+      "full_name": "STONEHILL GA NE",
+      "segments": "16"
+    },
+    {
+      "full_name": "STONEY BV NE",
+      "segments": "15"
+    },
+    {
+      "full_name": "STONEY DR NE",
+      "segments": "5"
+    },
+    {
+      "full_name": "STONEY TR NE",
+      "segments": "193"
+    },
+    {
+      "full_name": "STONEY TR NW",
+      "segments": "262"
+    },
+    {
+      "full_name": "STONEY TR SE",
+      "segments": "288"
+    },
+    {
+      "full_name": "STONEY TR SW",
+      "segments": "317"
+    },
+    {
+      "full_name": "STRATHCONA BV SW",
+      "segments": "26"
+    },
+    {
+      "full_name": "STRATHCONA DR SW",
+      "segments": "22"
+    },
+    {
+      "full_name": "SUNPARK GA SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "SUNRIDGE BV NE",
+      "segments": "15"
+    },
+    {
+      "full_name": "SUN VALLEY BV SE",
+      "segments": "80"
+    },
+    {
+      "full_name": "SYMONS VALLEY PY NW",
+      "segments": "175"
+    },
+    {
+      "full_name": "SYMONS VALLEY RD NW",
+      "segments": "97"
+    },
+    {
+      "full_name": "TEKARRA DR NW",
+      "segments": "8"
+    },
+    {
+      "full_name": "TRANS CANADA HI W",
+      "segments": "121"
+    },
+    {
+      "full_name": "TSUUT'INA PY SW",
+      "segments": "33"
+    },
+    {
+      "full_name": "TSUUT'INA TR SW",
+      "segments": "72"
+    },
+    {
+      "full_name": "TUSCANY BV NW",
+      "segments": "43"
+    },
+    {
+      "full_name": "TUSCANY HL NW",
+      "segments": "16"
+    },
+    {
+      "full_name": "TWELVE MI COULEE RD NW",
+      "segments": "48"
+    },
+    {
+      "full_name": "UNIVERSITY DR NW",
+      "segments": "46"
+    },
+    {
+      "full_name": "VALLEY RIDGE BV NW",
+      "segments": "38"
+    },
+    {
+      "full_name": "VALLEY RIDGE DR NW",
+      "segments": "10"
+    },
+    {
+      "full_name": "WALDEN BV SE",
+      "segments": "37"
+    },
+    {
+      "full_name": "WALDEN CM SE",
+      "segments": "11"
+    },
+    {
+      "full_name": "WALDEN DR SE",
+      "segments": "15"
+    },
+    {
+      "full_name": "WALDEN PR SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "WALGROVE BV SE",
+      "segments": "1"
+    },
+    {
+      "full_name": "WEASELHEAD RD SW",
+      "segments": "6"
+    },
+    {
+      "full_name": "WESTHILLS WY SW",
+      "segments": "1"
+    },
+    {
+      "full_name": "WESTWINDS DR NE",
+      "segments": "15"
+    },
+    {
+      "full_name": "WILLOW PARK DR SE",
+      "segments": "10"
+    },
+    {
+      "full_name": "WOLF WILLOW BV SE",
+      "segments": "21"
+    },
+    {
+      "full_name": "WOODPARK BV SW",
+      "segments": "42"
+    },
+    {
+      "full_name": "WOODVIEW DR SW",
+      "segments": "20"
+    }
+  ]
+}

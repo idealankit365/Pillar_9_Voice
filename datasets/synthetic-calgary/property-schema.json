@@ -1,0 +1,844 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pillar 9 synthetic Calgary property record",
+  "description": "A complete, public-field-only training fixture. This is not the confirmed Matrix/OneRLS field dictionary.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "matrixId",
+    "sourceSystem",
+    "sourceRecordId",
+    "sourceDataset",
+    "synthetic",
+    "syntheticNotice",
+    "schemaVersion",
+    "datasetVersion",
+    "trainingSplit",
+    "recordHash",
+    "status",
+    "listingDate",
+    "updatedAt",
+    "expiryDate",
+    "daysOnMarket",
+    "listPrice",
+    "originalListPrice",
+    "currency",
+    "pricePerSqft",
+    "annualPropertyTax",
+    "taxYear",
+    "condoFeeMonthly",
+    "condoFeeIncludes",
+    "parkingFeeMonthly",
+    "address",
+    "displayAddress",
+    "unitNumber",
+    "streetNumber",
+    "streetName",
+    "streetType",
+    "streetDirection",
+    "streetReferenceKey",
+    "community",
+    "communityCode",
+    "sector",
+    "quadrant",
+    "city",
+    "province",
+    "country",
+    "postalCode",
+    "latitude",
+    "longitude",
+    "geoPrecision",
+    "nearbyRoads",
+    "nearbyTransit",
+    "nearbyAmenities",
+    "schoolCatchment",
+    "nearbyServices",
+    "propertyType",
+    "propertySubType",
+    "architecturalStyle",
+    "ownershipType",
+    "titleType",
+    "zoning",
+    "constructionType",
+    "constructionStatus",
+    "occupancy",
+    "possession",
+    "yearBuilt",
+    "bedrooms",
+    "bedroomsAboveGrade",
+    "bedroomsBelowGrade",
+    "bathrooms",
+    "fullBathrooms",
+    "halfBathrooms",
+    "ensuites",
+    "roomsTotal",
+    "livingAreaSqft",
+    "totalFinishedSqft",
+    "lotSizeSqft",
+    "lotFrontageFeet",
+    "lotDepthFeet",
+    "levels",
+    "heating",
+    "cooling",
+    "heatingFuel",
+    "fireplaces",
+    "fireplaceFuel",
+    "flooring",
+    "basement",
+    "basementDevelopment",
+    "kitchenFeatures",
+    "appliancesIncluded",
+    "laundry",
+    "interiorFeatures",
+    "exteriorMaterial",
+    "roof",
+    "foundation",
+    "patioPorch",
+    "fencing",
+    "lotFeatures",
+    "landscaping",
+    "garageSpaces",
+    "parkingSpaces",
+    "parkingType",
+    "garageType",
+    "garageSize",
+    "waterSupply",
+    "sewer",
+    "electricity",
+    "naturalGas",
+    "energyFeatures",
+    "accessibilityFeatures",
+    "amenities",
+    "features",
+    "publicRemarks",
+    "spokenSummary",
+    "matchTags",
+    "publicUrl",
+    "virtualTourUrl",
+    "imageUrls",
+    "openHouseWindows",
+    "dataQualityScore",
+    "missingFields",
+    "validationWarnings",
+    "fieldProvenance",
+    "fieldVisibility",
+    "sourceRetrievedAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Synthetic identity field.",
+      "x-group": "identity",
+      "x-visibility": "public_fixture"
+    },
+    "matrixId": {
+      "type": "string",
+      "description": "Fixture-only Matrix-shaped identifier; never a live MLS identifier.",
+      "x-group": "identity",
+      "x-visibility": "public_fixture"
+    },
+    "sourceSystem": {
+      "type": "string",
+      "description": "Synthetic identity field.",
+      "x-group": "identity",
+      "x-visibility": "public_fixture"
+    },
+    "sourceRecordId": {
+      "type": "string",
+      "description": "Synthetic identity field.",
+      "x-group": "identity",
+      "x-visibility": "internal_fixture"
+    },
+    "sourceDataset": {
+      "type": "string",
+      "description": "Synthetic identity field.",
+      "x-group": "identity",
+      "x-visibility": "internal_fixture"
+    },
+    "synthetic": {
+      "type": "boolean",
+      "description": "Always true for this fixture.",
+      "x-group": "identity",
+      "x-visibility": "public_fixture"
+    },
+    "syntheticNotice": {
+      "type": "string",
+      "description": "Mandatory plain-language non-production warning.",
+      "x-group": "identity",
+      "x-visibility": "public_fixture"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "description": "Synthetic identity field.",
+      "x-group": "identity",
+      "x-visibility": "public_fixture"
+    },
+    "datasetVersion": {
+      "type": "string",
+      "description": "Synthetic identity field.",
+      "x-group": "identity",
+      "x-visibility": "internal_fixture"
+    },
+    "trainingSplit": {
+      "type": "string",
+      "description": "Property-level train, development, or locked-holdout assignment.",
+      "x-group": "identity",
+      "x-visibility": "internal_fixture"
+    },
+    "recordHash": {
+      "type": "string",
+      "description": "SHA-256 of the record before this hash field is populated.",
+      "x-group": "identity",
+      "x-visibility": "internal_fixture"
+    },
+    "status": {
+      "type": "string",
+      "description": "Synthetic lifecycle field.",
+      "x-group": "lifecycle",
+      "x-visibility": "public_fixture"
+    },
+    "listingDate": {
+      "type": "string",
+      "description": "Synthetic lifecycle field.",
+      "x-group": "lifecycle",
+      "x-visibility": "public_fixture"
+    },
+    "updatedAt": {
+      "type": "string",
+      "description": "Synthetic lifecycle field.",
+      "x-group": "lifecycle",
+      "x-visibility": "public_fixture"
+    },
+    "expiryDate": {
+      "type": "string",
+      "description": "Synthetic lifecycle field.",
+      "x-group": "lifecycle",
+      "x-visibility": "public_fixture"
+    },
+    "daysOnMarket": {
+      "type": "number",
+      "description": "Synthetic lifecycle field.",
+      "x-group": "lifecycle",
+      "x-visibility": "public_fixture"
+    },
+    "listPrice": {
+      "type": "number",
+      "description": "Fabricated CAD asking price for search testing.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "originalListPrice": {
+      "type": "number",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "pricePerSqft": {
+      "type": "number",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "annualPropertyTax": {
+      "type": "number",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "taxYear": {
+      "type": "number",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "condoFeeMonthly": {
+      "type": "number",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "condoFeeIncludes": {
+      "type": "array",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "parkingFeeMonthly": {
+      "type": "number",
+      "description": "Synthetic price field.",
+      "x-group": "price",
+      "x-visibility": "public_fixture"
+    },
+    "address": {
+      "type": "string",
+      "description": "Non-deliverable display address that cannot be treated as a real property address.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "displayAddress": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "unitNumber": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "streetNumber": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "streetName": {
+      "type": "string",
+      "description": "Official Calgary street-name reference used only to exercise language coverage.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "streetType": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "streetDirection": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "streetReferenceKey": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "internal_fixture"
+    },
+    "community": {
+      "type": "string",
+      "description": "Official Calgary residential community label used for area-language coverage.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "communityCode": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "sector": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "quadrant": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "city": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "province": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "country": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "postalCode": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Synthetic quadrant-level coordinate; not a property location.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Synthetic quadrant-level coordinate; not a property location.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "geoPrecision": {
+      "type": "string",
+      "description": "Synthetic address field.",
+      "x-group": "address",
+      "x-visibility": "public_fixture"
+    },
+    "nearbyRoads": {
+      "type": "array",
+      "description": "Street references assigned for test coverage; proximity is simulated.",
+      "x-group": "proximity",
+      "x-visibility": "public_fixture"
+    },
+    "nearbyTransit": {
+      "type": "array",
+      "description": "Synthetic proximity field.",
+      "x-group": "proximity",
+      "x-visibility": "public_fixture"
+    },
+    "nearbyAmenities": {
+      "type": "array",
+      "description": "Synthetic proximity field.",
+      "x-group": "proximity",
+      "x-visibility": "public_fixture"
+    },
+    "schoolCatchment": {
+      "type": "string",
+      "description": "Synthetic proximity field.",
+      "x-group": "proximity",
+      "x-visibility": "public_fixture"
+    },
+    "nearbyServices": {
+      "type": "array",
+      "description": "Synthetic proximity field.",
+      "x-group": "proximity",
+      "x-visibility": "public_fixture"
+    },
+    "propertyType": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "propertySubType": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "architecturalStyle": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "ownershipType": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "titleType": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "zoning": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "constructionType": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "constructionStatus": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "occupancy": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "possession": {
+      "type": "string",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "yearBuilt": {
+      "type": "number",
+      "description": "Synthetic classification field.",
+      "x-group": "classification",
+      "x-visibility": "public_fixture"
+    },
+    "bedrooms": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "bedroomsAboveGrade": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "bedroomsBelowGrade": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "bathrooms": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "fullBathrooms": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "halfBathrooms": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "ensuites": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "roomsTotal": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "livingAreaSqft": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "totalFinishedSqft": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "lotSizeSqft": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "lotFrontageFeet": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "lotDepthFeet": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "levels": {
+      "type": "number",
+      "description": "Synthetic rooms field.",
+      "x-group": "rooms",
+      "x-visibility": "public_fixture"
+    },
+    "heating": {
+      "type": "array",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "cooling": {
+      "type": "array",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "heatingFuel": {
+      "type": "string",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "fireplaces": {
+      "type": "number",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "fireplaceFuel": {
+      "type": "string",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "flooring": {
+      "type": "array",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "basement": {
+      "type": "string",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "basementDevelopment": {
+      "type": "string",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "kitchenFeatures": {
+      "type": "array",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "appliancesIncluded": {
+      "type": "array",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "laundry": {
+      "type": "string",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "interiorFeatures": {
+      "type": "array",
+      "description": "Synthetic interior field.",
+      "x-group": "interior",
+      "x-visibility": "public_fixture"
+    },
+    "exteriorMaterial": {
+      "type": "string",
+      "description": "Synthetic exterior field.",
+      "x-group": "exterior",
+      "x-visibility": "public_fixture"
+    },
+    "roof": {
+      "type": "string",
+      "description": "Synthetic exterior field.",
+      "x-group": "exterior",
+      "x-visibility": "public_fixture"
+    },
+    "foundation": {
+      "type": "string",
+      "description": "Synthetic exterior field.",
+      "x-group": "exterior",
+      "x-visibility": "public_fixture"
+    },
+    "patioPorch": {
+      "type": "array",
+      "description": "Synthetic exterior field.",
+      "x-group": "exterior",
+      "x-visibility": "public_fixture"
+    },
+    "fencing": {
+      "type": "array",
+      "description": "Synthetic exterior field.",
+      "x-group": "exterior",
+      "x-visibility": "public_fixture"
+    },
+    "lotFeatures": {
+      "type": "array",
+      "description": "Synthetic exterior field.",
+      "x-group": "exterior",
+      "x-visibility": "public_fixture"
+    },
+    "landscaping": {
+      "type": "array",
+      "description": "Synthetic exterior field.",
+      "x-group": "exterior",
+      "x-visibility": "public_fixture"
+    },
+    "garageSpaces": {
+      "type": "number",
+      "description": "Synthetic parking field.",
+      "x-group": "parking",
+      "x-visibility": "public_fixture"
+    },
+    "parkingSpaces": {
+      "type": "number",
+      "description": "Synthetic parking field.",
+      "x-group": "parking",
+      "x-visibility": "public_fixture"
+    },
+    "parkingType": {
+      "type": "array",
+      "description": "Synthetic parking field.",
+      "x-group": "parking",
+      "x-visibility": "public_fixture"
+    },
+    "garageType": {
+      "type": "string",
+      "description": "Synthetic parking field.",
+      "x-group": "parking",
+      "x-visibility": "public_fixture"
+    },
+    "garageSize": {
+      "type": "string",
+      "description": "Synthetic parking field.",
+      "x-group": "parking",
+      "x-visibility": "public_fixture"
+    },
+    "waterSupply": {
+      "type": "string",
+      "description": "Synthetic utilities field.",
+      "x-group": "utilities",
+      "x-visibility": "public_fixture"
+    },
+    "sewer": {
+      "type": "string",
+      "description": "Synthetic utilities field.",
+      "x-group": "utilities",
+      "x-visibility": "public_fixture"
+    },
+    "electricity": {
+      "type": "boolean",
+      "description": "Synthetic utilities field.",
+      "x-group": "utilities",
+      "x-visibility": "public_fixture"
+    },
+    "naturalGas": {
+      "type": "boolean",
+      "description": "Synthetic utilities field.",
+      "x-group": "utilities",
+      "x-visibility": "public_fixture"
+    },
+    "energyFeatures": {
+      "type": "array",
+      "description": "Synthetic utilities field.",
+      "x-group": "utilities",
+      "x-visibility": "public_fixture"
+    },
+    "accessibilityFeatures": {
+      "type": "array",
+      "description": "Synthetic accessibility field.",
+      "x-group": "accessibility",
+      "x-visibility": "public_fixture"
+    },
+    "amenities": {
+      "type": "array",
+      "description": "Synthetic marketing field.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "features": {
+      "type": "array",
+      "description": "Synthetic marketing field.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "publicRemarks": {
+      "type": "string",
+      "description": "Newly authored synthetic remarks; no MLS copy.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "spokenSummary": {
+      "type": "string",
+      "description": "Short safe summary for voice or chat presentation.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "matchTags": {
+      "type": "array",
+      "description": "Synthetic marketing field.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "publicUrl": {
+      "type": "string",
+      "description": "Synthetic marketing field.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "virtualTourUrl": {
+      "type": "string",
+      "description": "Synthetic marketing field.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "imageUrls": {
+      "type": "array",
+      "description": "Synthetic marketing field.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "openHouseWindows": {
+      "type": "array",
+      "description": "Synthetic marketing field.",
+      "x-group": "marketing",
+      "x-visibility": "public_fixture"
+    },
+    "dataQualityScore": {
+      "type": "number",
+      "description": "Synthetic governance field.",
+      "x-group": "governance",
+      "x-visibility": "internal_fixture"
+    },
+    "missingFields": {
+      "type": "array",
+      "description": "Synthetic governance field.",
+      "x-group": "governance",
+      "x-visibility": "internal_fixture"
+    },
+    "validationWarnings": {
+      "type": "array",
+      "description": "Synthetic governance field.",
+      "x-group": "governance",
+      "x-visibility": "internal_fixture"
+    },
+    "fieldProvenance": {
+      "type": "object",
+      "description": "Group-level labels showing that facts are generated and not observed.",
+      "x-group": "governance",
+      "x-visibility": "internal_fixture"
+    },
+    "fieldVisibility": {
+      "type": "object",
+      "description": "Fixture visibility policy; no private/member-only fields exist.",
+      "x-group": "governance",
+      "x-visibility": "internal_fixture"
+    },
+    "sourceRetrievedAt": {
+      "type": "string",
+      "description": "Synthetic governance field.",
+      "x-group": "governance",
+      "x-visibility": "internal_fixture"
+    }
+  }
+}

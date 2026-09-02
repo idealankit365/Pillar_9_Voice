@@ -1,0 +1,30 @@
+{
+  "name": "pillar9-bland-voice-agent",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Retell AI (and legacy Bland) integration service for Pillar 9 real-estate voice workflows.",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "demo": "bash scripts/start-demo.sh",
+    "seed": "node scripts/seed.js",
+    "smoke": "node scripts/smoke-demo.js",
+    "build:kb": "node scripts/build-knowledge-base.js",
+    "bootstrap:retell": "node scripts/bootstrap-retell.js",
+    "bootstrap:retell:apply": "node scripts/bootstrap-retell.js --apply",
+    "bootstrap:bland": "node scripts/bootstrap-bland.js",
+    "bootstrap:tests": "node scripts/bootstrap-bland-tests.js",
+    "voice:clone": "node scripts/clone-bland-voice.js",
+    "build:calgary": "node scripts/build-calgary-fixture.js",
+    "load:calgary": "node scripts/load-calgary-into-db.js",
+    "refresh:calgary": "node scripts/build-calgary-fixture.js --refresh-catalogs",
+    "build:whatsapp": "node scripts/build-whatsapp-templates.js",
+    "whatsapp:birthdays": "node scripts/run-whatsapp-birthdays.js",
+    "test": "node --test --test-reporter=spec"
+  },
+  "license": "UNLICENSED"
+}

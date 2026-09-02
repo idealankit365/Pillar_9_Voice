@@ -1,0 +1,77 @@
+{
+  "datasetVersion": "calgary-fixture-2026-08-30-v1",
+  "schemaVersion": "pillar9-public-fixture-1.0.0",
+  "generatedAt": "2026-08-30T00:00:00.000Z",
+  "seed": "pillar9-calgary-5000-v1",
+  "synthetic": true,
+  "notice": "All property facts, prices, availability, coordinates and proximity relationships are fabricated. Street, major-road, and community labels are public City of Calgary catalog references, not MLS data.",
+  "propertyCount": 5000,
+  "schemaFieldCount": 119,
+  "streetCatalogCount": 8784,
+  "coveredStreetCount": 8784,
+  "majorRoadCatalogCount": 380,
+  "coveredMajorRoadCount": 380,
+  "communityCatalogCount": 223,
+  "coveredCommunityCount": 223,
+  "counts": {
+    "status": {
+      "ACTIVE": 3469,
+      "WITHDRAWN": 390,
+      "CONDITIONAL": 396,
+      "EXPIRED": 375,
+      "PENDING": 370
+    },
+    "quadrant": {
+      "NE": 927,
+      "SE": 1324,
+      "NW": 1453,
+      "SW": 1296
+    },
+    "propertyType": {
+      "detached": 2191,
+      "duplex": 581,
+      "apartment": 1121,
+      "townhouse": 1107
+    },
+    "trainingSplit": {
+      "train": 3996,
+      "development": 493,
+      "locked_holdout": 511
+    }
+  },
+  "validation": {
+    "ok": true,
+    "errorCount": 0,
+    "errors": []
+  },
+  "datasetSha256": "5320136aa4ad7aa6c49a7ad734250767c0eb0ee0b84b320d2ec2296561dc7cf8",
+  "sources": [
+    {
+      "datasetId": "hjbp-5p9j",
+      "name": "Street Names",
+      "sourceUrl": "https://data.calgary.ca/Base-Maps/Street-Names/hjbp-5p9j",
+      "licence": "Open Government Licence - City of Calgary",
+      "retrievedAt": "2026-08-30T08:23:20.979Z",
+      "recordCount": 8785,
+      "sha256": "9fb0ee18d98d18e7c10bab55dd10e95f1568603e22bfd404f1b758ae15013462"
+    },
+    {
+      "datasetId": "surr-xmvs",
+      "name": "Community District Boundaries (residential labels only)",
+      "sourceUrl": "https://data.calgary.ca/Base-Maps/Community-District-Boundaries/surr-xmvs",
+      "licence": "Open Government Licence - City of Calgary",
+      "retrievedAt": "2026-08-30T08:23:20.979Z",
+      "recordCount": 223,
+      "sha256": "c2c95c16d54b7b78b67896e026002d664eb4379a680f494ee287574888749307"
+    },
+    {
+      "datasetId": "tqjs-vnhy",
+      "name": "Major Road Network (unique current Calgary road names)",
+      "sourceUrl": "https://data.calgary.ca/Transportation-Transit/Major-Road-Network/tqjs-vnhy",
+      "licence": "Open Government Licence - City of Calgary",
+      "retrievedAt": "2026-08-30T08:23:20.979Z",
+      "recordCount": 380,
+      "sha256": "78887ca94704f1b70822e763c3d31bf5026535bf11e697a8a09df4963bbb9312"
+    }
+  ]
+}

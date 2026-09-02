@@ -1,0 +1,52 @@
+# ---- secrets: never commit ----
+.env
+.env.*
+!.env.example
+
+# ---- runtime database (regenerate: npm run seed && npm run load:calgary) ----
+data/
+runtime/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# ---- build artifacts (regenerate: npm run build:* / bootstrap:*) ----
+generated/
+fixtures/
+*.zip
+
+# ---- dependencies ----
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ---- logs & temp ----
+*.log
+logs/
+tmp/
+.cache/
+*.pid
+
+# ---- test / coverage output ----
+coverage/
+.nyc_output/
+
+# ---- OS ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+
+# ---- editors ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- tunnels ----
+.ngrok*

@@ -1,0 +1,1790 @@
+{
+  "datasetId": "surr-xmvs",
+  "retrievedAt": "2026-08-30T08:23:20.979Z",
+  "rows": [
+    {
+      "class": "Residential",
+      "comm_code": "ABB",
+      "name": "ABBEYDALE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ACA",
+      "name": "ACADIA",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ALB",
+      "name": "ALBERT PARK/RADISSON HEIGHTS",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ALP",
+      "name": "ALPINE PARK",
+      "sector": "SOUTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ALT",
+      "name": "ALTADORE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ABR",
+      "name": "AMBLERIDGE",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "APP",
+      "name": "APPLEWOOD PARK",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ARB",
+      "name": "ARBOUR LAKE",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ASP",
+      "name": "ASPEN WOODS",
+      "sector": "WEST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "AUB",
+      "name": "AUBURN BAY",
+      "sector": "SOUTHEAST",
+      "srg": "COMPLETE",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ABP",
+      "name": "AURORA BUSINESS PARK",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BNF",
+      "name": "BANFF TRAIL",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BNK",
+      "name": "BANKVIEW",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BYV",
+      "name": "BAYVIEW",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BED",
+      "name": "BEDDINGTON HEIGHTS",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BEL",
+      "name": "BEL-AIRE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BLM",
+      "name": "BELMONT",
+      "sector": "SOUTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BLN",
+      "name": "BELTLINE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "CENTRE CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BVD",
+      "name": "BELVEDERE",
+      "sector": "EAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BDO",
+      "name": "BONAVISTA DOWNS",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BOW",
+      "name": "BOWNESS",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BRA",
+      "name": "BRAESIDE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BRE",
+      "name": "BRENTWOOD",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BRD",
+      "name": "BRIDGELAND/RIVERSIDE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BRI",
+      "name": "BRIDLEWOOD",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "BRT",
+      "name": "BRITANNIA",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CAM",
+      "name": "CAMBRIAN HEIGHTS",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CAN",
+      "name": "CANYON MEADOWS",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CAP",
+      "name": "CAPITOL HILL",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CAR",
+      "name": "CARRINGTON",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CAS",
+      "name": "CASTLERIDGE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CED",
+      "name": "CEDARBRAE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CHA",
+      "name": "CHAPARRAL",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2010s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CHW",
+      "name": "CHARLESWOOD",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CHN",
+      "name": "CHINATOWN",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "CENTRE CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CHK",
+      "name": "CHINOOK PARK",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CHR",
+      "name": "CHRISTIE PARK",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CIT",
+      "name": "CITADEL",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CSC",
+      "name": "CITYSCAPE",
+      "sector": "NORTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CLI",
+      "name": "CLIFF BUNGALOW",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "COA",
+      "name": "COACH HILL",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "COL",
+      "name": "COLLINGWOOD",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CPF",
+      "name": "COPPERFIELD",
+      "sector": "SOUTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2020s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "COR",
+      "name": "CORAL SPRINGS",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CNS",
+      "name": "CORNERSTONE",
+      "sector": "NORTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CGR",
+      "name": "COUGAR RIDGE",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "COU",
+      "name": "COUNTRY HILLS",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CHV",
+      "name": "COUNTRY HILLS VILLAGE",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "COV",
+      "name": "COVENTRY HILLS",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CRA",
+      "name": "CRANSTON",
+      "sector": "SOUTHEAST",
+      "srg": "COMPLETE",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CRE",
+      "name": "CRESCENT HEIGHTS",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CRM",
+      "name": "CRESTMONT",
+      "sector": "WEST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "CUR",
+      "name": "CURRIE BARRACKS",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DAL",
+      "name": "DALHOUSIE",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DRG",
+      "name": "DEER RIDGE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DRN",
+      "name": "DEER RUN",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DIA",
+      "name": "DIAMOND COVE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DIS",
+      "name": "DISCOVERY RIDGE",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DDG",
+      "name": "DOUGLASDALE/GLEN",
+      "sector": "SOUTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DOV",
+      "name": "DOVER",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DNC",
+      "name": "DOWNTOWN COMMERCIAL CORE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "CENTRE CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DNE",
+      "name": "DOWNTOWN EAST VILLAGE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "CENTRE CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "DNW",
+      "name": "DOWNTOWN WEST END",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "CENTRE CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "EAG",
+      "name": "EAGLE RIDGE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "EAU",
+      "name": "EAU CLAIRE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "CENTRE CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "EDG",
+      "name": "EDGEMONT",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "EPK",
+      "name": "ELBOW PARK",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "EYA",
+      "name": "ELBOYA",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ERI",
+      "name": "ERIN WOODS",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ERL",
+      "name": "ERLTON",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "EVN",
+      "name": "EVANSTON",
+      "sector": "NORTH",
+      "srg": "COMPLETE",
+      "comm_structure": "2010s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "EVE",
+      "name": "EVERGREEN",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "FAI",
+      "name": "FAIRVIEW",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "FAL",
+      "name": "FALCONRIDGE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "FHT",
+      "name": "FOREST HEIGHTS",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "FLN",
+      "name": "FOREST LAWN",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GAG",
+      "name": "GARRISON GREEN",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GAW",
+      "name": "GARRISON WOODS",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GLR",
+      "name": "GLACIER RIDGE",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GLA",
+      "name": "GLAMORGAN",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GBK",
+      "name": "GLENBROOK",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GDL",
+      "name": "GLENDALE",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GRV",
+      "name": "GREENVIEW",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "GRE",
+      "name": "GREENWOOD/GREENBRIAR",
+      "sector": "NORTHWEST",
+      "srg": "DEVELOPING",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HAM",
+      "name": "HAMPTONS",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HAR",
+      "name": "HARVEST HILLS",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HSN",
+      "name": "HASKAYNE",
+      "sector": "NORTHWEST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HAW",
+      "name": "HAWKWOOD",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HAY",
+      "name": "HAYSBORO",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HID",
+      "name": "HIDDEN VALLEY",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HPK",
+      "name": "HIGHLAND PARK",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HIW",
+      "name": "HIGHWOOD",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HIL",
+      "name": "HILLHURST",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HSD",
+      "name": "HOMESTEAD",
+      "sector": "NORTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HKS",
+      "name": "HOTCHKISS",
+      "sector": "SOUTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HOU",
+      "name": "HOUNSFIELD HEIGHTS/BRIAR HILL",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HUN",
+      "name": "HUNTINGTON HILLS",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "HUX",
+      "name": "HUXLEY",
+      "sector": "EAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ING",
+      "name": "INGLEWOOD",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "KEL",
+      "name": "KELVIN GROVE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "KSH",
+      "name": "KEYSTONE HILLS",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "KIL",
+      "name": "KILLARNEY/GLENGARRY",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "KCA",
+      "name": "KINCORA",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "KIN",
+      "name": "KINGSLAND",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "LKB",
+      "name": "LAKE BONAVISTA",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "LKV",
+      "name": "LAKEVIEW",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "LEG",
+      "name": "LEGACY",
+      "sector": "SOUTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "LEB",
+      "name": "LEWISBURG",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "LPK",
+      "name": "LINCOLN PARK",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "LIV",
+      "name": "LIVINGSTON",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "LMR",
+      "name": "LOWER MOUNT ROYAL",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MAC",
+      "name": "MACEWAN GLEN",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MAH",
+      "name": "MAHOGANY",
+      "sector": "SOUTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MAN",
+      "name": "MANCHESTER",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "EMPLOYMENT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MPL",
+      "name": "MAPLE RIDGE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MRL",
+      "name": "MARLBOROUGH",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MPK",
+      "name": "MARLBOROUGH PARK",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MRT",
+      "name": "MARTINDALE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MAF",
+      "name": "MAYFAIR",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MAL",
+      "name": "MAYLAND HEIGHTS",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MCK",
+      "name": "MCKENZIE LAKE",
+      "sector": "SOUTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MCT",
+      "name": "MCKENZIE TOWNE",
+      "sector": "SOUTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2010s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MEA",
+      "name": "MEADOWLARK PARK",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MDH",
+      "name": "MEDICINE HILL",
+      "sector": "WEST",
+      "srg": "COMPLETE",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MID",
+      "name": "MIDNAPORE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MLR",
+      "name": "MILLRISE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MIS",
+      "name": "MISSION",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MOR",
+      "name": "MONTEREY PARK",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MON",
+      "name": "MONTGOMERY",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MRN",
+      "name": "MORAINE",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "MOP",
+      "name": "MOUNT PLEASANT",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "NEB",
+      "name": "NEW BRIGHTON",
+      "sector": "SOUTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2010s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "NOL",
+      "name": "NOLAN HILL",
+      "sector": "NORTH",
+      "srg": "COMPLETE",
+      "comm_structure": "2020s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "NGM",
+      "name": "NORTH GLENMORE PARK",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "NHV",
+      "name": "NORTH HAVEN",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "NHU",
+      "name": "NORTH HAVEN UPPER",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "OAK",
+      "name": "OAKRIDGE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "OGD",
+      "name": "OGDEN",
+      "sector": "SOUTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "OPH",
+      "name": "OSPREY HILL",
+      "sector": "WEST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PAL",
+      "name": "PALLISER",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PAN",
+      "name": "PANORAMA HILLS",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2010s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PKD",
+      "name": "PARKDALE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PKH",
+      "name": "PARKHILL",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PKL",
+      "name": "PARKLAND",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PAT",
+      "name": "PATTERSON",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PEN",
+      "name": "PENBROOKE MEADOWS",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PCK",
+      "name": "PINE CREEK",
+      "sector": "SOUTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PIN",
+      "name": "PINERIDGE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "POI",
+      "name": "POINT MCKAY",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "PUM",
+      "name": "PUMP HILL",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "QLD",
+      "name": "QUEENSLAND",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "QPK",
+      "name": "QUEENS PARK VILLAGE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RAM",
+      "name": "RAMSAY",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RAN",
+      "name": "RANCHLANDS",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RVW",
+      "name": "RANGEVIEW",
+      "sector": "SOUTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RED",
+      "name": "RED CARPET",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RSN",
+      "name": "REDSTONE",
+      "sector": "NORTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "REN",
+      "name": "RENFREW",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RRC",
+      "name": "RICARDO RANCH",
+      "sector": "SOUTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RIC",
+      "name": "RICHMOND",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RID",
+      "name": "RIDEAU PARK",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RIV",
+      "name": "RIVERBEND",
+      "sector": "SOUTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ROC",
+      "name": "ROCKY RIDGE",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RDL",
+      "name": "ROSEDALE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RMT",
+      "name": "ROSEMONT",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RCK",
+      "name": "ROSSCARROCK",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ROX",
+      "name": "ROXBORO",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "ROY",
+      "name": "ROYAL OAK",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2010s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RUN",
+      "name": "RUNDLE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "RUT",
+      "name": "RUTLAND PARK",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SAD",
+      "name": "SADDLE RIDGE",
+      "sector": "NORTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SGH",
+      "name": "SAGE HILL",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SAN",
+      "name": "SANDSTONE VALLEY",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SCA",
+      "name": "SCARBORO",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SSW",
+      "name": "SCARBORO/SUNALTA WEST",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SCE",
+      "name": "SCENIC ACRES",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SET",
+      "name": "SETON",
+      "sector": "SOUTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SHG",
+      "name": "SHAGANAPPI",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SHS",
+      "name": "SHAWNEE SLOPES",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SHN",
+      "name": "SHAWNESSY",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SHW",
+      "name": "SHERWOOD",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2010s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SIG",
+      "name": "SIGNAL HILL",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SVO",
+      "name": "SILVERADO",
+      "sector": "SOUTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SIL",
+      "name": "SILVER SPRINGS",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SKR",
+      "name": "SKYVIEW RANCH",
+      "sector": "NORTHEAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SOM",
+      "name": "SOMERSET",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SOC",
+      "name": "SOUTH CALGARY",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SOV",
+      "name": "SOUTHVIEW",
+      "sector": "EAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SOW",
+      "name": "SOUTHWOOD",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SPH",
+      "name": "SPRINGBANK HILL",
+      "sector": "WEST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SPR",
+      "name": "SPRUCE CLIFF",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "STA",
+      "name": "ST. ANDREWS HEIGHTS",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "STR",
+      "name": "STRATHCONA PARK",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SNA",
+      "name": "SUNALTA",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SDC",
+      "name": "SUNDANCE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SSD",
+      "name": "SUNNYSIDE",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "SVR",
+      "name": "SYMONS VALLEY RANCH",
+      "sector": "NORTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "TAR",
+      "name": "TARADALE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "TEM",
+      "name": "TEMPLE",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "THO",
+      "name": "THORNCLIFFE",
+      "sector": "NORTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "TUS",
+      "name": "TUSCANY",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "TUX",
+      "name": "TUXEDO PARK",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "THS",
+      "name": "TWINHILLS",
+      "sector": "EAST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "UND",
+      "name": "UNIVERSITY DISTRICT",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "OTHER"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "UNI",
+      "name": "UNIVERSITY HEIGHTS",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "UOC",
+      "name": "UNIVERSITY OF CALGARY",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "OTHER"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "UMR",
+      "name": "UPPER MOUNT ROYAL",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "VAL",
+      "name": "VALLEY RIDGE",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "2000s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "VAR",
+      "name": "VARSITY",
+      "sector": "NORTHWEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "VIS",
+      "name": "VISTA HEIGHTS",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WAL",
+      "name": "WALDEN",
+      "sector": "SOUTH",
+      "srg": "COMPLETE",
+      "comm_structure": "2020s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WGT",
+      "name": "WESTGATE",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WHL",
+      "name": "WEST HILLHURST",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "INNER CITY"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WSP",
+      "name": "WEST SPRINGS",
+      "sector": "WEST",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WHI",
+      "name": "WHITEHORN",
+      "sector": "NORTHEAST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WLD",
+      "name": "WILDWOOD",
+      "sector": "WEST",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WIL",
+      "name": "WILLOW PARK",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1960s/1970s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WND",
+      "name": "WINDSOR PARK",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WIN",
+      "name": "WINSTON HEIGHTS/MOUNTVIEW",
+      "sector": "CENTRE",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1950s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WWO",
+      "name": "WOLF WILLOW",
+      "sector": "SOUTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WBN",
+      "name": "WOODBINE",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "WOO",
+      "name": "WOODLANDS",
+      "sector": "SOUTH",
+      "srg": "ESTABLISHED",
+      "comm_structure": "1980s/1990s"
+    },
+    {
+      "class": "Residential",
+      "comm_code": "YKV",
+      "name": "YORKVILLE",
+      "sector": "SOUTH",
+      "srg": "DEVELOPING",
+      "comm_structure": "BUILDING OUT"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+services:
+  voice-api:
+    build: .
+    env_file: .env
+    ports:
+      - "8787:8787"
+    volumes:
+      - voice-data:/app/data
+    restart: unless-stopped
+volumes:
+  voice-data:

@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { setTimeout as delay } from 'node:timers/promises';
+import { buildConfig } from '../src/config.js';
+import { BlandClient } from '../src/adapters.js';
+import { buildToolManifest } from '../src/tool-manifest.js';
+import { PATHWAY_GENERATION_PROMPT } from '../src/prompts.js';
+import { createApplication } from '../src/server.js';
+import { AppError } from '../src/errors.js';
+
+const config=buildConfig();const client=new BlandClient(config.bland);const manifest=buildToolManifest(config);const outDir=path.resolve('generated');fs.mkdirSync(outDir,{recursive:true});
+if(config.bland.dryRun){const app=createApplication({config});const previewTools=structuredClone(manifest);for(const definition of previewTools)definition.headers['x-p9-tool-key']='[REDACTED — TOOL_API_KEY is inserted only during controlled live bootstrap]';const preview={dryRun:true,tools:previewTools,knowledge:{type:'text',name:'Pillar 9 automated representative',description:'Approved Canadian real-estate FAQ, objections, and conversation guidance',file:'generated/pillar9-agent-knowledge.txt'},pathway:config.bland.generatePathway?{input_prompt:PATHWAY_GENERATION_PROMPT,input_name:'Pillar 9 compliant real-estate voice workflow'}:null,inbound:app.service.inboundConfiguration()};fs.writeFileSync(path.join(outDir,'bland-bootstrap-preview.json'),JSON.stringify(preview,null,2));app.repo.close();console.log(JSON.stringify({ok:true,dryRun:true,preview:'generated/bland-bootstrap-preview.json',next:'Set BLAND_DRY_RUN=false only after compliance and credential review.'},null,2));process.exit(0);}
+if(!config.publicBaseUrl.startsWith('https://'))throw new AppError(400,'HTTPS_REQUIRED','Live Bland bootstrap requires an HTTPS PUBLIC_BASE_URL.');
+const toolIds=[];for(const definition of manifest){const created=await client.createTool(definition);toolIds.push(created.tool_id||created.id);}
+const kbText=fs.readFileSync(path.join(outDir,'pillar9-agent-knowledge.txt'),'utf8');const createdKb=await client.uploadKnowledge({type:'text',name:'Pillar 9 automated representative',description:'Approved facts and response patterns only',text:kbText});const knowledgeId=createdKb.data?.id||createdKb.id;let knowledgeStatus=createdKb.data?.status||createdKb.status;for(let i=0;knowledgeId&&knowledgeStatus&&knowledgeStatus!=='COMPLETED'&&knowledgeStatus!=='FAILED'&&i<30;i+=1){await delay(2000);const state=await client.getKnowledge(knowledgeId);knowledgeStatus=state.data?.status||state.status;}
+let pathway=null;if(config.bland.generatePathway){const queued=await client.generatePathway({input_prompt:PATHWAY_GENERATION_PROMPT,input_name:'Pillar 9 compliant real-estate voice workflow'});const jobId=queued.data?.jobId;pathway={jobId,ready:false};for(let i=0;jobId&&!pathway.ready&&i<60;i+=1){await delay(2000);const state=await client.getPathwayJob(jobId);pathway={jobId,...state.data};}}
+const result={createdAt:new Date().toISOString(),toolIds,knowledgeId,knowledgeStatus,pathway,manualChecks:['Open each tool in Bland and verify variable interpolation.','Open generated Pathway and manually add/verify transfer nodes; transfer_list is ignored by Pathways.','Run every adversarial scenario before production.','Copy IDs into secret-managed environment variables; this file contains IDs, not API keys.']};fs.writeFileSync(path.join(outDir,'bland-bootstrap-result.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

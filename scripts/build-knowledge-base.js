@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const datasetDir=path.join(root,'datasets');const outputDir=path.join(root,'generated');fs.mkdirSync(outputDir,{recursive:true});
+const files=['objections.json','faq.json','conversation-examples.json'];let text=`PILLAR 9 AUTOMATED REPRESENTATIVE — APPROVED KNOWLEDGE\nGenerated: ${new Date().toISOString()}\n\nNON-NEGOTIABLE: Disclose automation in the first sentence. Pillar 9 is the service provider, not a brokerage. Work only on behalf of the configured named licensed professional and brokerage. Never claim to be human or licensed. Never invent listing or market facts. Never provide valuations, offer/negotiation, mortgage product, legal, tax, or financial advice. Never guarantee future prices. Honour opt-outs immediately.\n\n`;
+for(const filename of files){const records=JSON.parse(fs.readFileSync(path.join(datasetDir,filename),'utf8'));text+=`## ${filename.replace('.json','').toUpperCase()}\n\n`;for(const row of records){text+=`ID: ${row.id}\nContext: ${row.context||row.category||row.intent||''}\nCustomer: ${row.customer||row.question||row.objection||''}\nApproved response: ${row.response||row.answer||row.agent||''}\nAction: ${row.action||row.nextAction||''}\nBoundary: ${row.boundary||''}\n\n`;}}
+const target=path.join(outputDir,'pillar9-agent-knowledge.txt');fs.writeFileSync(target,text);console.log(JSON.stringify({ok:true,target,bytes:Buffer.byteLength(text),records:files.reduce((n,f)=>n+JSON.parse(fs.readFileSync(path.join(datasetDir,f),'utf8')).length,0)},null,2));
