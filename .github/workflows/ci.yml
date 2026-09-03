@@ -1,0 +1,54 @@
+name: Voice Agent CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: voice-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Tests and image build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # The service itself has zero runtime dependencies, so there is nothing to install.
+      - name: Run the test suite
+        run: node --test --test-reporter=spec
+
+      - name: Build the React console
+        run: npm --prefix web ci && npm --prefix web run build
+
+      - name: Build the container image
+        run: docker build -t pillar9-voice:ci .
+
+      - name: Boot the image and check /health
+        run: |
+          docker run -d --name p9ci -p 18787:8787 \
+            -e NODE_ENV=development -e ADMIN_API_KEY=ci-admin-key-not-a-secret-000000 \
+            -e TOOL_API_KEY=ci-tool-key-not-a-secret-0000000 \
+            -e DEMO_PANEL_API_KEY=ci-demo-key-not-a-secret-0000000 \
+            pillar9-voice:ci
+          for i in $(seq 1 40); do
+            curl --fail --silent http://127.0.0.1:18787/health >/dev/null && exit 0
+            sleep 3
+          done
+          docker logs p9ci
+          exit 1
+
+      - name: Stop the test container
+        if: always()
+        run: docker rm -f p9ci || true
