@@ -15,6 +15,10 @@ generated/
 fixtures/
 *.zip
 
+# ---- React UI build (regenerate: npm run build:ui) ----
+web/dist/
+web/node_modules/
+
 # ---- dependencies ----
 node_modules/
 npm-debug.log*

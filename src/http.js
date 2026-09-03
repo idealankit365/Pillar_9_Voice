@@ -39,6 +39,7 @@ export function createHttpHandler({config,service,repo,whatsappService}){
         case 'GET /demo-api/status': result=service.demoStatus();break;
         case 'POST /demo-api/outbound': result=await service.runDemoOutbound(data);break;
         case 'POST /demo-api/inbound/configure': result=await service.configureInboundFromDemo(data);break;
+        case 'GET /demo-api/live': result=service.liveTranscript();break;
         case 'GET /demo-api/interactions': result={interactions:repo.listInteractions(Number(url.searchParams.get('limit'))||25)};break;
         case 'POST /tools/permission': result=await service.checkOutboundPermission(data);break;
         case 'POST /tools/context': result=service.getContext(data.contactId);break;
@@ -74,7 +75,7 @@ export function createHttpHandler({config,service,repo,whatsappService}){
         default: throw new AppError(404,'NOT_FOUND','Route not found.');
       }
       reply(response,200,{ok:true,data:result});
-    }catch(error){const safe=asAppError(error);console.error(JSON.stringify({level:'error',code:safe.code,message:redact(error.message),route:`${request.method} ${url.pathname}`,durationMs:Date.now()-started}));reply(response,safe.status,{ok:false,error:{code:safe.code,message:safe.message,...(safe.details&&config.nodeEnv!=='production'?{details:safe.details}:{})}});}
+    }catch(error){const safe=asAppError(error);const cause=error?.cause;console.error(JSON.stringify({level:'error',code:safe.code,message:redact(error.message),route:`${request.method} ${url.pathname}`,durationMs:Date.now()-started,...(cause?{cause:redact(cause.code||cause.message||String(cause)),...(cause.errors?{causes:cause.errors.slice(0,4).map((e)=>redact(e.code||e.message))}:{})}:{}),...(safe.status>=500&&error?.stack?{at:String(error.stack).split('\n')[1]?.trim()}:{})}));reply(response,safe.status,{ok:false,error:{code:safe.code,message:safe.message,...(safe.details&&config.nodeEnv!=='production'?{details:safe.details}:{})}});}
   };
 }
 

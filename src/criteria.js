@@ -34,7 +34,15 @@ function parseBudget(text) {
   const around=text.match(/(?:around|about|roughly)\s+\$?(\d+(?:[,.]\d+)*\s*[km]?)/i); if(around){const n=amount(around[1]);return{priceMin:Math.round(n*.9),priceMax:Math.round(n*1.1),priceTarget:n};} return{};
 }
 function arrays(value){return Array.isArray(value)?unique(value.map(String)):typeof value==='string'?unique(value.split(/,|\bor\b/i).map((x)=>x.trim())):[];}
+export function normalizeAreaName(value) {
+  const raw=String(value??'').trim(); const normalized=raw.toLowerCase().replace(/\s+/g,' ');
+  for(const[canonical,variants]of AREAS)if(variants.includes(normalized))return canonical;
+  return raw;
+}
 function numberNear(text, pattern){const m=text.match(pattern);if(!m)return undefined;return NUMBER_WORDS.get(m[1].toLowerCase())??Number(m[1]);}
+
+const PRICE_FLOOR = 25000;
+const PRICE_CEILING = 100000000;
 
 export function normalizeListingCriteria(input={}) {
   const provided=input.criteria&&typeof input.criteria==='object'?input.criteria:input; const utterance=String(input.utterance||provided.utterance||'').trim(); const text=utterance.toLowerCase(); const criteria={}; const confidence={};
@@ -49,7 +57,7 @@ export function normalizeListingCriteria(input={}) {
   const garageSpaces=numberNear(text,/(?:at least|min(?:imum)?\s+)?(one|two|three|four|\d+)[\s-]*(?:car|vehicle)?\s*garage/i);if(garageSpaces&&!criteria.garageSpacesMin){criteria.garageSpacesMin=garageSpaces;confidence.garageSpacesMin=.9;}
   const built=text.match(/(?:built (?:after|since)|newer than)\s*(\d{4})/i);if(built&&!criteria.yearBuiltMin){criteria.yearBuiltMin=Number(built[1]);confidence.yearBuiltMin=.88;}
   const condoFee=text.match(/(?:condo fees?|fees?)\s*(?:under|below|less than|max(?:imum)?(?: of)?)\s*\$?(\d{2,4})/i);if(condoFee&&criteria.condoFeeMax===undefined){criteria.condoFeeMax=Number(condoFee[1]);confidence.condoFeeMax=.9;}
-  const areas=arrays(provided.areas??provided.area);for(const[canonical,variants]of AREAS)if(variants.some((v)=>has(text,v)))areas.push(canonical);
+  const areas=arrays(provided.areas??provided.area).map(normalizeAreaName);for(const[canonical,variants]of AREAS)if(variants.some((v)=>has(text,v)))areas.push(canonical);
   for(const[canonical,re]of [['NW Calgary',/\b(?:nw|northwest|north west)\b.{0,30}\bcalgary\b/i],['NE Calgary',/\b(?:ne|northeast|north east)\b.{0,30}\bcalgary\b/i],['SW Calgary',/\b(?:sw|southwest|south west)\b.{0,30}\bcalgary\b/i],['SE Calgary',/\b(?:se|southeast|south east)\b.{0,30}\bcalgary\b/i]])if(re.test(text))areas.push(canonical);
   if(areas.some((a)=>/^(?:NW|NE|SW|SE) Calgary$/.test(a)))remove(areas,'Calgary');if(areas.length){criteria.areas=unique(areas);confidence.areas=.87;}
   const types=arrays(provided.propertyTypes??provided.property_types).map((x)=>x.toLowerCase());for(const[canonical,variants]of Object.entries(TYPES)){const matched=variants.some((v)=>has(text,v));const condoFeeOnly=canonical==='apartment'&&/\bno condo fees?\b/i.test(text)&&!/\b(?:a|an)\s+condo\b|\bcondo\s+(?:apartment|unit|home)\b/i.test(text);const semiDetached=canonical==='detached'&&/\bsemi[- ]detached\b/i.test(text);if(matched&&!condoFeeOnly&&!semiDetached)types.push(canonical);}if(types.length){criteria.propertyTypes=unique(types);confidence.propertyTypes=.9;}
@@ -58,8 +66,10 @@ export function normalizeListingCriteria(input={}) {
   const selected=[...must,...nice,...exclude];if(selected.includes('double garage')){remove(must,'garage');remove(nice,'garage');remove(exclude,'garage');}if(selected.includes('finished basement')||selected.includes('walkout basement')){remove(must,'basement');remove(nice,'basement');remove(exclude,'basement');}if(selected.includes('fenced yard')){remove(must,'yard');remove(nice,'yard');remove(exclude,'yard');}
   if(/no condo fees?|without condo fees?/i.test(utterance))exclude.push('condo fee');if(/no major renovations?|move[- ]in ready/i.test(utterance))criteria.conditionPreference='move-in ready';if(must.length)criteria.mustHave=unique(must);if(nice.length)criteria.niceToHave=unique(nice.filter((x)=>!must.includes(x)));if(exclude.length)criteria.exclude=unique(exclude);
   const move=utterance.match(/(?:move|moving|possession)(?:\s+by|\s+before|\s+in)?\s+([A-Za-z]+\s+\d{4}|\d{4}-\d{2}-\d{2}|(?:one|two|three|four|five|six|seven|eight|nine|ten|\d+)\s+(?:weeks?|months?))/i);if(move&&!criteria.targetMoveDate)criteria.targetMoveDate=move[1];
-  const conflicts=[];if(criteria.priceMin&&criteria.priceMax&&criteria.priceMin>criteria.priceMax)conflicts.push('price_min_exceeds_price_max');if(criteria.mustHave?.some((x)=>criteria.exclude?.includes(x)))conflicts.push('same_feature_required_and_excluded');
+  const conflicts=[];
+  for(const field of ['priceMin','priceMax','priceTarget']){const value=criteria[field];if(value!==undefined&&(value<PRICE_FLOOR||value>PRICE_CEILING)){delete criteria[field];delete confidence[field];if(!conflicts.includes('price_out_of_expected_range'))conflicts.push('price_out_of_expected_range');}}
+  if(criteria.priceMin&&criteria.priceMax&&criteria.priceMin>criteria.priceMax)conflicts.push('price_min_exceeds_price_max');if(criteria.mustHave?.some((x)=>criteria.exclude?.includes(x)))conflicts.push('same_feature_required_and_excluded');
   const missing=[];if(!criteria.priceMax)missing.push('price_max');if(!criteria.areas?.length)missing.push('areas');if(!criteria.bedroomsMin)missing.push('bedrooms_min');
-  const nextBestQuestion=conflicts.length?'I heard two details that conflict. Which one should I use?':missing[0]==='price_max'?'What is the highest purchase price you want included?':missing[0]==='areas'?'Which communities or cities should I include?':missing[0]==='bedrooms_min'?'What is the minimum number of bedrooms you need?':'Which one feature matters most if we need to compare close matches?';
+  const nextBestQuestion=conflicts.includes('price_out_of_expected_range')?'I do not think I heard your budget correctly. What is the highest purchase price in dollars?':conflicts.length?'I heard two details that conflict. Which one should I use?':missing[0]==='price_max'?'What is the highest purchase price you want included?':missing[0]==='areas'?'Which communities or cities should I include?':missing[0]==='bedrooms_min'?'What is the minimum number of bedrooms you need?':'Which one feature matters most if we need to compare close matches?';
   return{criteria,confidence,missing,conflicts,nextBestQuestion,sourceUtterance:utterance||null};
 }

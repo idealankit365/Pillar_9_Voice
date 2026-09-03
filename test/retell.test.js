@@ -163,3 +163,63 @@ test('the prompt forbids claiming an outcome a tool did not return', (t) => {
   assert.match(prompt, /\{\{current_date\}\}/);
   assert.match(prompt, /never infer or recall one/i);
 });
+
+test('transcript updates stream live without flooding the activity feed', async (t) => {
+  const rig = rigOf(t);
+  const send = (event, call) => rig.service.processRetellWebhook({ event, call: { call_id: 'live1', retell_llm_dynamic_variables: { first_name: 'Ankit' }, ...call } });
+  send('call_started', {});
+  send('transcript_updated', { transcript_object: [{ role: 'agent', content: 'Hi Ankit.' }] });
+  send('transcript_updated', { transcript_object: [{ role: 'agent', content: 'Hi Ankit.' }, { role: 'user', content: 'Go ahead.' }] });
+
+  const during = rig.service.liveTranscript().call;
+  assert.equal(during.status, 'live');
+  assert.equal(during.turns.length, 2, 'repeated transcript events must not be dropped as duplicates');
+  assert.deepEqual(during.turns.map((x) => x.role), ['agent', 'user']);
+  // Only call_started should have produced an interaction row.
+  assert.equal(rig.repo.listInteractions(50).filter((x) => x.providerCallId === 'live1').length, 1);
+
+  send('call_ended', { call_analysis: { call_summary: 'Wrapped up.' } });
+  const after = rig.service.liveTranscript().call;
+  assert.equal(after.status, 'ended', 'the panel freezes on this');
+  assert.equal(after.turns.length, 2, 'a payload without turns must not wipe the transcript');
+  assert.equal(after.summary, 'Wrapped up.');
+});
+
+test('a shorter transcript payload cannot clobber a longer one', (t) => {
+  const rig = rigOf(t);
+  const send = (event, call) => rig.service.processRetellWebhook({ event, call: { call_id: 'live2', ...call } });
+  send('call_started', {});
+  send('transcript_updated', { transcript_object: [{ role: 'agent', content: 'One' }, { role: 'user', content: 'Two' }, { role: 'agent', content: 'Three' }] });
+  send('transcript_updated', { transcript_object: [{ role: 'agent', content: 'One' }] });
+  assert.equal(rig.service.liveTranscript().call.turns.length, 3);
+});
+
+test('the live transcript store keeps only the five most recent calls', (t) => {
+  const rig = rigOf(t);
+  for (let n = 0; n < 8; n += 1) rig.service.processRetellWebhook({ event: 'call_started', call: { call_id: `bulk${n}` } });
+  assert.equal(rig.service.liveCalls.size, 5, 'a long demo session must not grow memory without bound');
+});
+
+test('transcript_updated is read from the top-level transcript_with_tool_calls', (t) => {
+  const rig = rigOf(t);
+  // Retell puts the transcript at the TOP level for transcript_updated and only under
+  // call.transcript_object on call_ended/call_analyzed. Reading only the latter left the
+  // live panel permanently empty during a real call.
+  rig.service.processRetellWebhook({ event: 'call_started', call: { call_id: 'shape1' } });
+  rig.service.processRetellWebhook({
+    event: 'transcript_updated',
+    call: { call_id: 'shape1' },
+    transcript_with_tool_calls: [
+      { role: 'agent', content: 'Hi Jordan.', words: [] },
+      { role: 'user', content: 'Go ahead.', words: [] },
+      { role: 'tool_call_invocation', name: 'p9_search_matrix_listings', arguments: '{}' },
+      { role: 'tool_call_result', content: '{"ok":true}' }
+    ]
+  });
+  const call = rig.service.liveTranscript().call;
+  assert.equal(call.status, 'live');
+  assert.deepEqual(call.turns, [
+    { role: 'agent', content: 'Hi Jordan.' },
+    { role: 'user', content: 'Go ahead.' }
+  ], 'tool-call rows must not appear in the conversation panel');
+});

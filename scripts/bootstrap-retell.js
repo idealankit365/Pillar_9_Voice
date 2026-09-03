@@ -36,7 +36,7 @@ const agentPayload = (llmId) => ({
   voice_speed: config.retell.voiceSpeed,
   language: 'en-US',
   webhook_url: `${config.publicBaseUrl}/webhooks/retell`,
-  webhook_events: ['call_started', 'call_ended', 'call_analyzed'],
+  webhook_events: ['call_started', 'transcript_updated', 'call_ended', 'call_analyzed'],
   max_call_duration_ms: config.maxCallDurationMinutes * 60 * 1000,
   end_call_after_silence_ms: 30000,
   post_call_analysis_data: [

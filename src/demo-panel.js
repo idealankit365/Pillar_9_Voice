@@ -1,4 +1,10 @@
-export const DEMO_PANEL_HTML = String.raw`<!doctype html>
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const BUILT_PANEL = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'web', 'dist', 'index.html');
+
+const LEGACY_DEMO_PANEL_HTML = String.raw`<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -323,3 +329,6 @@ export const DEMO_PANEL_HTML = String.raw`<!doctype html>
   </script>
 </body>
 </html>`;
+
+export const DEMO_PANEL_USES_REACT_BUILD = fs.existsSync(BUILT_PANEL);
+export const DEMO_PANEL_HTML = DEMO_PANEL_USES_REACT_BUILD ? fs.readFileSync(BUILT_PANEL, 'utf8') : LEGACY_DEMO_PANEL_HTML;

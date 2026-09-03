@@ -1,11 +1,43 @@
+# Single command:  docker compose up -d --build
+#
+# Brings up the public tunnel and the voice service, seeds the database on first boot,
+# loads the 5,000 Calgary properties, and re-points the Retell agent at the current
+# tunnel URL. Set NGROK_AUTHTOKEN in .env (free token from dashboard.ngrok.com).
+#
+# Deployed behind a real domain instead? Drop the tunnel:
+#   docker compose up -d --build voice-api
+# and set PUBLIC_BASE_URL in .env to your https:// domain.
+
 services:
+  tunnel:
+    image: ngrok/ngrok:latest
+    restart: on-failure:2
+    command: ["http", "voice-api:8787", "--log", "stdout"]
+    environment:
+      # Free token from dashboard.ngrok.com. Left empty the tunnel simply exits and the
+      # service falls back to PUBLIC_BASE_URL, rather than blocking the whole compose file.
+      NGROK_AUTHTOKEN: "${NGROK_AUTHTOKEN:-}"
+    expose:
+      - "4040"
+
   voice-api:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
     env_file: .env
+    environment:
+      # Where the entrypoint asks ngrok for the current public URL. Unset this (or run
+      # only the voice-api service) when deploying behind a real domain.
+      NGROK_API: tunnel:4040
+      DATABASE_PATH: /app/data/pillar9-voice.sqlite
     ports:
       - "8787:8787"
     volumes:
+      # Consents, do-not-contact records and call history must survive a rebuild.
       - voice-data:/app/data
-    restart: unless-stopped
+    depends_on:
+      - tunnel
+
 volumes:
   voice-data:

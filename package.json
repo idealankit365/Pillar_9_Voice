@@ -10,6 +10,8 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
+    "build:ui": "npm --prefix web install && npm --prefix web run build",
+    "dev:ui": "npm --prefix web run dev",
     "demo": "bash scripts/start-demo.sh",
     "seed": "node scripts/seed.js",
     "smoke": "node scripts/smoke-demo.js",

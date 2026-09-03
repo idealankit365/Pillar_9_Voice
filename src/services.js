@@ -12,7 +12,7 @@ const truthy=(value)=>value===true||value==='true'||value===1||value==='1';
 const stable=(value)=>JSON.stringify(value&&typeof value==='object'&&!Array.isArray(value)?Object.fromEntries(Object.keys(value).sort().map((key)=>[key,JSON.parse(stable(value[key]))])):value);
 
 export class VoiceAgentService {
-  constructor({config,repo,bland,matrix,messaging,compliance,retell}){this.config=config;this.repo=repo;this.bland=bland;this.matrix=matrix;this.messaging=messaging;this.compliance=compliance;this.retell=retell;}
+  constructor({config,repo,bland,matrix,messaging,compliance,retell}){this.config=config;this.repo=repo;this.bland=bland;this.matrix=matrix;this.messaging=messaging;this.compliance=compliance;this.retell=retell;this.liveCalls=new Map();}
   identity(){const agent=this.repo.getAgent(this.config.licensedAgent.id)||this.config.licensedAgent;return{serviceName:this.config.serviceName,assistantName:this.config.assistantName,agent};}
   requireContact(contactId){const contact=this.repo.getContact(contactId);assert(contact,404,'CONTACT_NOT_FOUND','Contact was not found.');return contact;}
   demoStatus(){const coverage=this.repo.syntheticCoverageStats();const runtime=this.voiceRuntime();return{environment:this.config.nodeEnv,identity:this.identity(),modes:CAMPAIGN_MODES,demoPanel:{allowLiveCalls:this.config.demoPanel.allowLiveCalls},provider:runtime.name,voice:{provider:runtime.name,dryRun:runtime.dryRun,fromNumber:runtime.fromNumber||null,inboundNumber:runtime.inboundNumber||null,recordCalls:runtime.recordCalls,webhookPath:runtime.webhookPath},retell:{dryRun:this.config.retell.dryRun,configured:Boolean(this.config.retell.apiKey),agentConfigured:Boolean(this.config.retell.agentId),voiceId:this.config.retell.voiceId,model:this.config.retell.model,fromNumber:this.config.retell.fromNumber||null,inboundNumber:this.config.retell.inboundNumber||null,recordCalls:this.config.retell.recordCalls},bland:{dryRun:this.config.bland.dryRun,configured:Boolean(this.config.bland.apiKey),controlMode:this.config.bland.pathwayId?'Pathway':'task prompt',pathwayVersion:this.config.bland.pathwayId?this.config.bland.pathwayVersion:null,voice:this.config.bland.voice,inboundNumber:this.config.bland.inboundNumber||null,fromNumber:this.config.bland.fromNumber||null,recordCalls:this.config.bland.recordCalls,toolCount:this.config.bland.toolIds.length,knowledgeBaseCount:this.config.bland.knowledgeBaseIds.length},matrix:{mode:this.config.matrix.mode,productionAdapterConfigured:this.config.matrix.mode==='http'&&Boolean(this.config.matrix.baseUrl&&this.config.matrix.apiKey)},data:{listingCount:this.repo.countListings(),syntheticListingCount:coverage.listingCount,streetReferencesCovered:coverage.coveredStreetCount,majorRoadsCovered:coverage.coveredMajorRoadCount,communitiesCovered:coverage.coveredCommunityCount},callingWindow:this.config.callingWindow,openai:{enabled:this.config.openai.enabled,model:this.config.openai.model},whatsapp:{enabled:this.config.whatsapp.enabled,dryRun:this.config.whatsapp.dryRun},notice:this.config.matrix.mode==='fixture'?'Synthetic development listings only; not Matrix production data.':'Production listing responses remain limited to approved public/client fields.'};}
@@ -40,7 +40,7 @@ export class VoiceAgentService {
   captureCriteria({contactId,utterance,criteria,confirm=false,draftId}){
     this.requireContact(contactId);const normalized=normalizeListingCriteria({utterance,criteria});
     if(!truthy(confirm)){const draft=this.repo.saveCriteria(contactId,normalized.criteria,false,normalized.sourceUtterance);return{stage:'read_back_required',draftId:draft.id,...normalized,instruction:'Read every normalized attribute back and ask for an explicit yes before confirmation.'};}
-    assert(draftId,400,'DRAFT_REQUIRED','A criteria draft ID is required before confirmation.');const latest=this.repo.latestCriteria(contactId,false);assert(latest&&latest.id===draftId&&!latest.confirmed,409,'STALE_CRITERIA_DRAFT','The latest unconfirmed criteria draft must be confirmed.');assert(!normalized.conflicts.length,409,'CRITERIA_CONFLICT','Conflicting criteria cannot be confirmed.',normalized.conflicts);if(Object.keys(normalized.criteria).length)assert(stable(normalized.criteria)===stable(latest.data),409,'CRITERIA_CHANGED_AFTER_READBACK','Criteria changed after the read-back; create and read back a new draft.');
+    assert(draftId,400,'DRAFT_REQUIRED','A criteria draft ID is required before confirmation.');const latest=this.repo.latestCriteria(contactId,false);assert(latest&&latest.id===draftId&&!latest.confirmed,409,'STALE_CRITERIA_DRAFT','The latest unconfirmed criteria draft must be confirmed.');assert(!normalized.conflicts.length,409,'CRITERIA_CONFLICT',normalized.conflicts.includes('price_out_of_expected_range')?'That budget does not look right. Ask for the highest purchase price again in plain dollars before confirming.':'Conflicting criteria cannot be confirmed.',normalized.conflicts);if(Object.keys(normalized.criteria).length)assert(stable(normalized.criteria)===stable(latest.data),409,'CRITERIA_CHANGED_AFTER_READBACK','Criteria changed after the read-back; create and read back a new draft.');
     const data=latest.data;const confirmed=this.repo.saveCriteria(contactId,data,true,latest.sourceUtterance);return{stage:'confirmed',criteriaId:confirmed.id,criteria:data,missing:normalized.missing,nextBestQuestion:normalized.nextBestQuestion};
   }
 
@@ -82,6 +82,8 @@ export class VoiceAgentService {
   async purchaseNumber({confirmed=false}){assert(this.config.voiceProvider==='bland',501,'NUMBER_PURCHASE_UNSUPPORTED','Number purchase is not implemented for the Retell provider. Buy the number in the Retell dashboard.');assert(truthy(confirmed),400,'EXPLICIT_CONFIRMATION_REQUIRED','Number purchase requires confirmed=true.');assert(this.config.bland.purchaseNumber,403,'NUMBER_PURCHASE_DISABLED','Set BLAND_PURCHASE_NUMBER=true to allow this billable action.');assert(!this.config.bland.dryRun,409,'LIVE_MODE_REQUIRED','Number purchase is disabled in dry-run mode.');return this.bland.purchaseNumber({area_code:this.config.bland.areaCode,country_code:'CA'});}
 
   processRetellWebhook(event){const call=event?.call||{};const eventType=String(event?.event||'call_event');const callId=call.call_id||call.callId;assert(callId,400,'EVENT_ID_REQUIRED','Webhook call ID is required.');
+    this.trackLiveCall(eventType,callId,call,event);
+    if(eventType==='transcript_updated')return{processed:true,event:eventType,live:true};
     // Retell sends up to three events per call; each is claimed separately so retries stay idempotent.
     if(!this.repo.claimEvent(`${callId}:${eventType}`,eventType))return{duplicate:true};
     const contactId=call.metadata?.contact_id||call.retell_llm_dynamic_variables?.contact_id||null;
@@ -91,5 +93,27 @@ export class VoiceAgentService {
     this.repo.addInteraction({contactId,direction:call.direction==='inbound'?'inbound':'outbound',mode:call.metadata?.mode,providerCallId:callId,disposition,summary,metadata:{eventType,disconnectionReason:call.disconnection_reason||null,provider:'retell'}});
     return{processed:true,event:eventType,disposition};}
   retellDisposition(call,analysis){if(analysis.user_sentiment==='Negative'&&analysis.call_successful===false)return'NOT_INTERESTED';const reason=String(call.disconnection_reason||'');if(reason==='dial_no_answer'||reason==='dial_busy'||reason==='voicemail_reached')return'NO_CONTACT_MADE';if(reason==='dial_failed')return'NO_CONTACT_MADE';if(call.transfer_destination||reason==='call_transfer')return'TRANSFERRED';if(analysis.call_successful===true)return'COMPLETED_ACTION';if(call.call_status==='ended'||reason)return'FOLLOW_UP_REQUIRED';return null;}
+  trackLiveCall(eventType,callId,call,event){
+    const existing=this.liveCalls.get(callId);
+    const entry=existing||{callId,startedAt:new Date().toISOString(),endedAt:null,status:'live',turns:[],contactId:null,direction:null,summary:null,disposition:null};
+    entry.contactId=call.metadata?.contact_id||call.retell_llm_dynamic_variables?.contact_id||entry.contactId;
+    entry.firstName=call.retell_llm_dynamic_variables?.first_name||entry.firstName||null;
+    entry.toNumber=call.to_number||entry.toNumber||null;
+    entry.direction=call.direction||entry.direction;
+    const source=[event?.transcript_with_tool_calls,call.transcript_object,call.transcript_with_tool_calls].find((value)=>Array.isArray(value));
+    const turns=source?source.filter((turn)=>turn&&(turn.role==='user'||turn.role==='agent')):null;
+    if(turns){const mapped=turns.slice(-200).map((turn)=>({role:turn.role==='user'?'user':'agent',content:String(turn.content||'').slice(0,2000)})).filter((turn)=>turn.content);
+      if(mapped.length>=entry.turns.length)entry.turns=mapped;}
+    if(eventType==='call_ended'||eventType==='call_analyzed'){entry.status='ended';entry.endedAt=entry.endedAt||new Date().toISOString();}
+    if(call.call_analysis?.call_summary)entry.summary=String(call.call_analysis.call_summary).slice(0,2000);
+    entry.updatedAt=new Date().toISOString();
+    this.liveCalls.set(callId,entry);
+    // Keep only the five most recent calls so a long session cannot grow without bound.
+    if(this.liveCalls.size>5)for(const key of [...this.liveCalls.keys()].slice(0,this.liveCalls.size-5))this.liveCalls.delete(key);
+    return entry;}
+  liveTranscript(){assert(this.config.demoPanel.enabled,404,'DEMO_PANEL_DISABLED','The demo panel is disabled.');
+    const entries=[...this.liveCalls.values()].sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt)));
+    const active=entries.find((entry)=>entry.status==='live')||entries[0]||null;
+    return{call:active?{callId:active.callId,status:active.status,firstName:active.firstName,toNumber:active.toNumber,direction:active.direction,startedAt:active.startedAt,endedAt:active.endedAt,summary:active.summary,turns:active.turns}:null};}
   processBlandWebhook(event){const eventId=event.event_id||event.call_id||event.callId;assert(eventId,400,'EVENT_ID_REQUIRED','Webhook event ID or call ID is required.');if(!this.repo.claimEvent(String(eventId),String(event.type||'call_event')))return{duplicate:true};const disposition=event.disposition_tag||event.disposition||null;const contactId=event.metadata?.contact_id||event.variables?.contact_id||null;if(disposition==='DO_NOT_CONTACT'&&contactId&&this.repo.getContact(contactId))this.doNotCall({contactId,reason:'call_disposition'});this.repo.addInteraction({contactId,direction:event.inbound?'inbound':'outbound',mode:event.metadata?.mode,providerCallId:event.call_id||event.callId,disposition,summary:event.summary?String(event.summary).slice(0,2000):null,metadata:{eventType:event.type||null}});return{processed:true,disposition};}
 }

@@ -1,0 +1,16 @@
+.git
+.gitignore
+node_modules
+web/node_modules
+web/dist
+data
+fixtures
+generated
+runtime
+docs
+test
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.log
+.DS_Store
