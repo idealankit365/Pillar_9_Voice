@@ -25,6 +25,12 @@ jobs:
         with:
           node-version: 24
 
+      # fixtures/ is gitignored, so CI must rebuild the Calgary database before tests
+      # that read it. The Open Calgary snapshots are committed, so this needs no network
+      # and reproduces the same dataset hash every time.
+      - name: Build the Calgary fixture
+        run: node scripts/build-calgary-fixture.js
+
       # The service itself has zero runtime dependencies, so there is nothing to install.
       - name: Run the test suite
         run: node --test --test-reporter=spec
