@@ -1,4 +1,5 @@
 import { AppError, assert } from './errors.js';
+import { TYPE_NAMES } from './synthetic-calgary.js';
 import { normalizeAreaName } from './criteria.js';
 
 export async function fetchJson(url, options = {}, timeoutMs = 10000) {
@@ -56,7 +57,21 @@ const publicListing=(value)=>Object.fromEntries(PUBLIC_FIELDS.filter((key)=>valu
 const quadrant=(address)=>address.match(/\b(NW|NE|SW|SE)\b/i)?.[1]?.toUpperCase();
 const text=(value)=>String(value||'').trim().toLowerCase();
 const hasFeature=(listing,feature)=>{const requested=text(feature);const values=[...(listing.features||[]),...(listing.amenities||[]),...(listing.matchTags||[]),...(listing.accessibilityFeatures||[]),...(listing.cooling||[])].map(text);if(requested==='garage')return Number(listing.garageSpaces)>0||values.some((value)=>value.includes('garage'));if(requested==='basement')return Boolean(listing.basement&&listing.basement!=='none'||values.some((value)=>value.includes('basement')));if(requested==='condo fee')return Number(listing.condoFeeMonthly)>0;if(requested==='fireplace')return Number(listing.fireplaces)>0;if(requested==='central air conditioning')return values.some((value)=>value.includes('central air'));if(requested==='step-free main entrance')return values.some((value)=>value.includes('step-free'));return values.some((value)=>value===requested||value.includes(requested));};
-const searchSummary=(listing)=>({matrixId:listing.matrixId,status:listing.status,address:listing.displayAddress||listing.address,community:listing.community,quadrant:listing.quadrant,listPrice:listing.listPrice,bedrooms:listing.bedrooms,bathrooms:listing.bathrooms,livingAreaSqft:listing.livingAreaSqft,propertyType:listing.propertyType,yearBuilt:listing.yearBuilt,garageSpaces:listing.garageSpaces,condoFeeMonthly:listing.condoFeeMonthly,synthetic:listing.synthetic,matchScore:listing.matchScore,matchedCriteria:listing.matchedCriteria,tradeoffs:listing.tradeoffs});
+// Fixture rows store "SYN-CGY-004079 — synthetic property on Bridle Estates WY SW" so a
+// fabricated address can never be mistaken for a real one. Spoken aloud that is both
+// confusing and leaks internal wording, so the agent gets the street without a house
+// number: still not an actionable address, but a sentence a person can say.
+const SPOKEN_STREET_TYPES=Object.freeze({...TYPE_NAMES,WY:'Way',CI:'Circle',CV:'Cove',BA:'Bay',IS:'Island',HI:'Highway',PZ:'Plaza',PH:'Path',PS:'Passage',CA:'Cape',VI:'Villas',CO:'Court'});
+const spokenType=(code)=>{if(!code)return'';const value=SPOKEN_STREET_TYPES[code];if(value)return value;return /^[A-Z]{2,3}$/.test(code)?'':code;};
+
+const speakableAddress=(listing)=>{
+  if(!listing.synthetic)return listing.displayAddress||listing.address;
+  const parts=[listing.streetName,spokenType(listing.streetType),listing.streetDirection].filter(Boolean);
+  if(parts.length)return `a property on ${parts.join(' ')}`;
+  return String(listing.address||'').replace(/^\S+\s+—\s+synthetic property on\s+/i,'a property on ');
+};
+
+const searchSummary=(listing)=>({matrixId:listing.matrixId,status:listing.status,address:speakableAddress(listing),community:listing.community,quadrant:listing.quadrant,listPrice:listing.listPrice,bedrooms:listing.bedrooms,bathrooms:listing.bathrooms,livingAreaSqft:listing.livingAreaSqft,propertyType:listing.propertyType,yearBuilt:listing.yearBuilt,garageSpaces:listing.garageSpaces,condoFeeMonthly:listing.condoFeeMonthly,synthetic:listing.synthetic,matchScore:listing.matchScore,matchedCriteria:listing.matchedCriteria,tradeoffs:listing.tradeoffs});
 
 export class MatrixAdapter {
   constructor(config,repo){this.config=config;this.repo=repo;}

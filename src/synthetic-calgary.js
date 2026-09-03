@@ -48,7 +48,7 @@ export const SYNTHETIC_PROPERTY_FIELDS=Object.freeze(Object.entries(GROUPS).flat
 }))));
 export const SYNTHETIC_PROPERTY_FIELD_NAMES=Object.freeze(SYNTHETIC_PROPERTY_FIELDS.map((field)=>field.name));
 
-const TYPE_NAMES=Object.freeze({AV:'Avenue',BV:'Boulevard',BY:'Bay',CL:'Close',CM:'Common',CR:'Crescent',CT:'Court',DR:'Drive',GA:'Gate',GD:'Gardens',GR:'Green',GV:'Grove',HE:'Heath',HL:'Hill',HT:'Heights',IN:'Inlet',LD:'Landing',LI:'Link',LN:'Lane',MR:'Manor',ME:'Mews',MT:'Mount',PA:'Park',PD:'Parade',PL:'Place',PT:'Point',PY:'Parkway',RI:'Rise',RD:'Road',RO:'Row',SQ:'Square',ST:'Street',TC:'Terrace',TR:'Trail',VW:'View',WA:'Way',WK:'Walk'});
+export const TYPE_NAMES=Object.freeze({AV:'Avenue',BV:'Boulevard',BY:'Bay',CL:'Close',CM:'Common',CR:'Crescent',CT:'Court',DR:'Drive',GA:'Gate',GD:'Gardens',GR:'Green',GV:'Grove',HE:'Heath',HL:'Hill',HT:'Heights',IN:'Inlet',LD:'Landing',LI:'Link',LN:'Lane',MR:'Manor',ME:'Mews',MT:'Mount',PA:'Park',PD:'Parade',PL:'Place',PT:'Point',PY:'Parkway',RI:'Rise',RD:'Road',RO:'Row',SQ:'Square',ST:'Street',TC:'Terrace',TR:'Trail',VW:'View',WA:'Way',WK:'Walk'});
 const PROPERTY_TYPES=['detached','detached','detached','detached','townhouse','townhouse','apartment','apartment','duplex'];
 const STATUS_BUCKETS=['ACTIVE','ACTIVE','ACTIVE','ACTIVE','ACTIVE','ACTIVE','ACTIVE','ACTIVE','ACTIVE','CONDITIONAL','PENDING','WITHDRAWN','EXPIRED'];
 const FLOORING=['hardwood','luxury vinyl plank','carpet','tile','laminate'];

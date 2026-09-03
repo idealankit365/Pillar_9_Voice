@@ -56,3 +56,23 @@ test('the prompt tells the agent how to deliver that disclosure', () => {
   assert.match(BASE_RETELL_PROMPT_FOR_TEST, /DATA PROVENANCE/);
   assert.match(BASE_RETELL_PROMPT_FOR_TEST, /never read internal labels aloud/i);
 });
+
+test('synthetic listings are spoken as a street, never as an internal label', () => {
+  const repo = new Repository(path.resolve('fixtures/calgary-synthetic-5000.sqlite'));
+  try {
+    const matrix = new MatrixAdapter({ mode: 'fixture' }, repo);
+    const result = matrix.fixtureSearch({ areas: ['SW Calgary'], priceMax: 900000, bedroomsMin: 2 }, 5);
+    for (const listing of result.listings) {
+      // Stored form is "SYN-CGY-004079 — synthetic property on Bridle Estates WY SW",
+      // which the agent read aloud verbatim on a live call.
+      assert.equal(/synthetic|SYN-CGY/i.test(listing.address), false, `spoken address leaked: ${listing.address}`);
+      assert.match(listing.address, /^a property on \S/);
+      // no house number: a fabricated address must stay non-actionable
+      assert.equal(/^a property on \d/.test(listing.address), false);
+      assert.equal(listing.synthetic, true, 'machine-readable provenance is unchanged');
+      assert.match(listing.matrixId, /^SYN-CGY-/, 'the id still identifies it as fixture data');
+    }
+    // two-letter codes are expanded or dropped, never spoken raw
+    assert.equal(/\b(?:WY|CI|CV|BA|PS|PZ|PH|CO)\b/.test(result.listings.map((x) => x.address).join(' ')), false);
+  } finally { repo.close(); }
+});
