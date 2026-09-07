@@ -139,11 +139,11 @@ export default function App() {
 
       <main className="page">
         <div className="wrap">
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center', marginBottom: 24 }}>
+          <div className="connection-bar">
             <Badge tone={status ? (live ? 'warn' : 'good') : ''}>
               {status ? (live ? 'Live — billable calls' : 'Dry run — no call sent') : 'Not connected'}
             </Badge>
-            <div className={`notice ${connection.tone}`} style={{ flex: 1, minWidth: 260 }}>{connection.text}</div>
+            <div className={`notice ${connection.tone}`}>{connection.text}</div>
           </div>
 
           <div className="cols">
