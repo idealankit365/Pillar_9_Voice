@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import http from 'node:http';
-import { MatrixAdapter, OpenAIResponsesClient, WhatsAppClient } from '../src/adapters.js';
+import { MatrixAdapter, OpenAIResponsesClient, WhatsAppClient, fetchJson } from '../src/adapters.js';
 import { Repository } from '../src/db.js';
 import { testRig } from './helpers.js';
 import { buildRetellGeneralPrompt } from '../src/prompts.js';
@@ -75,4 +75,27 @@ test('synthetic listings are spoken as a street, never as an internal label', ()
     // two-letter codes are expanded or dropped, never spoken raw
     assert.equal(/\b(?:WY|CI|CV|BA|PS|PZ|PH|CO)\b/.test(result.listings.map((x) => x.address).join(' ')), false);
   } finally { repo.close(); }
+});
+
+test('upstream failures surface the provider reason, not just a status code', async () => {
+  // A live 402 from Retell showed only "Upstream returned HTTP 402.", which gave the
+  // operator no way to tell an out-of-credit account from a bad key or a rate limit.
+  const cases = [
+    [402, { error_message: 'Insufficient balance' }, /payment required/i],
+    [401, { error_message: 'Invalid API key' }, /api key was rejected/i],
+    [429, { message: 'Slow down' }, /rate limit/i]
+  ];
+  for (const [status, payload, expected] of cases) {
+    const server = http.createServer((_q, r) => { r.writeHead(status, { 'content-type': 'application/json' }); r.end(JSON.stringify(payload)); });
+    await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+    try {
+      await assert.rejects(() => fetchJson(`http://127.0.0.1:${server.address().port}/x`), (error) => {
+        assert.equal(error.code, 'UPSTREAM_ERROR');
+        assert.match(error.message, expected, `status ${status} must explain itself`);
+        assert.match(error.message, new RegExp(String(status)));
+        assert.equal(error.details.status, status);
+        return true;
+      });
+    } finally { await new Promise((resolve) => server.close(resolve)); }
+  }
 });

@@ -2,9 +2,23 @@ import { AppError, assert } from './errors.js';
 import { TYPE_NAMES } from './synthetic-calgary.js';
 import { normalizeAreaName } from './criteria.js';
 
+// Providers return a useful reason; the generic status line hid it.
+const UPSTREAM_HINTS=Object.freeze({
+  401:'the API key was rejected',
+  402:'payment required — the provider account is out of credit or has no active payment method',
+  403:'the provider refused this action for this account',
+  404:'the provider could not find that resource',
+  429:'the provider rate limit was reached'
+});
+function upstreamMessage(status,body){
+  const detail=body&&(body.error_message||body.message||body.error||(typeof body.raw==='string'?body.raw.slice(0,200):''));
+  const hint=UPSTREAM_HINTS[status];
+  return `Provider returned HTTP ${status}${hint?` (${hint})`:''}.${detail?` ${String(detail).slice(0,200)}`:''}`;
+}
+
 export async function fetchJson(url, options = {}, timeoutMs = 10000) {
   const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),timeoutMs);
-  try { const response=await fetch(url,{...options,signal:controller.signal}); const text=await response.text(); let body=null; try{body=text?JSON.parse(text):null;}catch{body={raw:text};} if(!response.ok)throw new AppError(502,'UPSTREAM_ERROR',`Upstream returned HTTP ${response.status}.`,{status:response.status,body}); return body; }
+  try { const response=await fetch(url,{...options,signal:controller.signal}); const text=await response.text(); let body=null; try{body=text?JSON.parse(text):null;}catch{body={raw:text};} if(!response.ok)throw new AppError(502,'UPSTREAM_ERROR',upstreamMessage(response.status,body),{status:response.status,body}); return body; }
   catch(error){if(error.name==='AbortError')throw new AppError(504,'UPSTREAM_TIMEOUT','Upstream request timed out.');throw error;}
   finally{clearTimeout(timer);}
 }

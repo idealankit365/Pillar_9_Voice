@@ -1,6 +1,8 @@
 # ---- secrets: never commit ----
 .env
 .env.*
+.env2
+env2
 !.env.example
 
 # ---- runtime database (regenerate: npm run seed && npm run load:calgary) ----
